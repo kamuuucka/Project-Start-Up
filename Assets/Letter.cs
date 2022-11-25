@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Letter : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     public void Dissapear()
     {
         Destroy(gameObject);
