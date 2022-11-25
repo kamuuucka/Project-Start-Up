@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 1577790279}
   - component: {fileID: 1577790278}
   - component: {fileID: 1577790277}
+  - component: {fileID: 1577790280}
   m_Layer: 0
   m_Name: B
   m_TagString: Untagged
@@ -777,6 +778,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577790275}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1577790280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577790275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0df8f5977aeb04fb40c9693aade268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1977052396
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +835,7 @@ GameObject:
   - component: {fileID: 2072921283}
   - component: {fileID: 2072921282}
   - component: {fileID: 2072921281}
+  - component: {fileID: 2072921284}
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
@@ -907,6 +921,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072921278}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2072921284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072921278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0df8f5977aeb04fb40c9693aade268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8953288097275538808
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,9 +944,9 @@ GameObject:
   - component: {fileID: 8953288097275538820}
   - component: {fileID: 8953288097275538821}
   - component: {fileID: 8953288097275538810}
+  - component: {fileID: 8953288097275538822}
   - component: {fileID: 8953288097275538811}
   - component: {fileID: 8953288097275538823}
-  - component: {fileID: 8953288097275538822}
   - component: {fileID: 8953288097275538824}
   m_Layer: 0
   m_Name: Player
@@ -1050,3 +1076,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   highlightMaterial: {fileID: 2100000, guid: 04950182add440a40bd30c168d70bba9, type: 2}
+  range: 2

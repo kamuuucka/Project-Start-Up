@@ -6,19 +6,20 @@ public class PickUp : MonoBehaviour
 {
     [SerializeField] private Material highlightMaterial;
     RaycastHit hit;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
         Debug.DrawRay(transform.position, hit.point, Color.yellow);
-        if(Physics.Raycast(transform.position, transform.forward, out hit))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, range))
         {
             Selecting();
         }
@@ -26,7 +27,6 @@ public class PickUp : MonoBehaviour
 
     void Selecting()
     {
-        Debug.Log(hit.transform.name);
 
         var selection = hit.transform;
         var selectionRenderer = selection.GetComponent<Renderer>();
@@ -37,8 +37,13 @@ public class PickUp : MonoBehaviour
 
         if (Input.GetKey("space"))
         {
-            Destroy(gameObject);
+            Debug.Log(hit.transform.name);
+
+            Letter letter = hit.transform.GetComponent<Letter>();
+            if (letter != null)
+            {
+                letter.Dissapear();
+            }
         }
     }
-
 }
