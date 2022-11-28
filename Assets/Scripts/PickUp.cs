@@ -31,6 +31,7 @@ public class PickUp : MonoBehaviour
             selectionRenderer.material = highlightMaterial;
         }
 
+        //when pressing space
         if (Input.GetKey("space"))
         {
             //name of the object you have selected
