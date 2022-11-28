@@ -2,49 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Array2DEditor;
 
 public class LettersAreaData : MonoBehaviour
 {
     public GameObject letterPrefab;
     private System.Random rnd = new System.Random();
-    public char[,] letterArray = new char[3, 7]
-    {
-         { '0', 'B', 'C', 'D', 'E', 'F', 'O' },
-         { 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
-         { 'A', '0', 'C', 'D', 'E', 'F', 'G' }
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', '0', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', '0' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'X' }
-    };
-    public char[,] letterArray2 = new char[3, 7]
-    {
-         { '0', 'B', 'Y', '0', 'E', 'F', 'O' },
-         { 'A', 'B', '0', 'D', 'E', '0', 'G' },
-         { 'A', '0', 'C', 'D', 'W', 'F', 'G' }
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', '0', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', '0' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'X' }
-    };
-    public char[,] letterArray3 = new char[3, 7]
-    {
-         { '0', 'B', 'C', '0', 'E', 'F', 'O' },
-         { 'K', 'A', 'M', 'A', 'E', '0', 'G' },
-         { '0', '0', '0', '0', '0', '0', '0' }
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', '0', 'F', 'G' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', '0' },
-         //{ 'A', 'B', 'C', 'D', 'E', 'F', 'X' }
-    };
+
+
+    //Arays creating the letter pattern for the level
+    public Array2DString testArray;
+    public Array2DString letterArray;
+    public Array2DString letterArray2;
+    public Array2DString letterArray3;
+
+    //The rows and columns have to be the same as the arrayLevel arrays [rows, columns]
+    private int rows = 7;
+    private int columns = 7;
+
+    //Starting position for the letters
+    public float letterX = -7.8f;
+    public float letterZ = -7.8f;
+    //How big the space between letters has to be
+    public float spaceLetters = 2.6f;
 
     private char randomLetter;
-    private int childrenIndex = 0;
-    private int rows = 3;
-    private int columns = 7;
-    private float x = -7.8f;
-    private float z = -7.8f;
     private int levelNumber = 1;
+
     private void Start()
     {
         loadLetters(levelSwitch(levelNumber));
@@ -60,44 +44,49 @@ public class LettersAreaData : MonoBehaviour
         }
     }
 
-    private void loadLetters(char[,] tempArray)
+    private void loadLetters(Array2DString testArray)
     {
-        x = -7.8f;
-        z = -7.8f;
+        letterX = -7.8f;
+        letterZ = -7.8f;
+
         for (int i = 0; i < rows; i++)
         {
+            //Because we are using float, the 0 is hard to reach so we are helping the loops :)
             if (i == 3)
             {
-                x = 0.0f;
+                letterZ = 0.0f;
             }
 
             for (int j = 0; j < columns; j++)
             {
-                if (tempArray[i, j] == '0')
-                {
-                    Debug.Log("Found the random letter");
-                    randomLetter = (char)rnd.Next(65, 91);
-                    tempArray[i, j] = randomLetter;
-                }
+                //Because we are using float, the 0 is hard to reach so we are helping the loops :)
                 if (j == 3)
                 {
-                    x = 0.0f;
+                    letterX = 0.0f;
                 }
+
+                if (testArray.GetCell(i,j).Equals("0") || testArray.GetCell(i,j).Equals(""))
+                {
+                    //Debug.Log("Found the random letter");
+                    randomLetter = (char)rnd.Next(65, 91);
+                    testArray.SetCell(i, j, randomLetter.ToString());
+                }
+                
                 //Debug.Log("Coords: " + x + " : " + z);
-                Vector3 spawnPoint = new Vector3(x, 0.55f, z);
-                letterPrefab.name = tempArray[i, j].ToString();
+                Vector3 spawnPoint = new Vector3(letterX, 0.55f, letterZ);
+                letterPrefab.name = testArray.GetCell(i, j);//.ToString();
                 GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
                 letter.name = letter.name.Replace("(Clone)", "").Trim();
                 letter.transform.parent = this.transform;
                 //Debug.Log(letterArray[i, j]);
-                x += 2.6f;
+                letterX += 2.6f;
             }
-            z += 2.6f;
-            x = -7.8f;
+            letterZ += 2.6f;
+            letterX = -7.8f;
         }
     }
 
-    private char[,] levelSwitch(int number)
+    private Array2DString levelSwitch(int number)
     {
         switch (number)
         {
