@@ -5,13 +5,13 @@ using System;
 
 public class LettersAreaData : MonoBehaviour
 {
-    public GameObject sphere;
+    public GameObject letterPrefab;
     private System.Random rnd = new System.Random();
-    public char[,] letterArray = new char[2,7]
+    public char[,] letterArray = new char[3,7]
     {
          { '0', 'B', 'C', 'D', 'E', 'F', 'O' },
-         { 'A', 'B', 'C', 'D', 'E', 'F', 'G' }
-         //{ 'A', '0', 'C', 'D', 'E', 'F', 'G' },
+         { 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
+         { 'A', '0', 'C', 'D', 'E', 'F', 'G' }
          //{ 'A', 'B', 'C', 'D', 'E', 'F', 'G' },
          //{ 'A', 'B', 'C', 'D', '0', 'F', 'G' },
          //{ 'A', 'B', 'C', 'D', 'E', 'F', '0' },
@@ -20,13 +20,13 @@ public class LettersAreaData : MonoBehaviour
 
     private char randomLetter;
     private int childrenIndex = 0;
-    private int rows = 2;
+    private int rows = 3;
     private int columns = 7;
     private float x = -7.8f;
     private float z = -7.8f;
     private void Start()
     {
-        Transform[] allChildren = GetComponentsInChildren<Transform>();
+        //Transform[] allChildren = GetComponentsInChildren<Transform>();
         for (int i = 0; i < rows; i++)
         {
             if (i == 3)
@@ -46,10 +46,12 @@ public class LettersAreaData : MonoBehaviour
                 {
                     x = 0.0f;
                 }
-                allChildren[childrenIndex].name = letterArray[i, j].ToString();
+                //allChildren[childrenIndex].name = letterArray[i, j].ToString();
                 Debug.Log("Coords: " + x + " : " + z);
                 Vector3 spawnPoint = new Vector3(x, 0.55f, z);
-                Instantiate(sphere, spawnPoint, Quaternion.identity);
+                letterPrefab.name = letterArray[i, j].ToString();
+                GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
+                letter.name = letter.name.Replace("(Clone)", "").Trim();
                 Debug.Log(letterArray[i, j]);
 
                 x += 2.6f;
