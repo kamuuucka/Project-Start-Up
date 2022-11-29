@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Letter : MonoBehaviour
 {
@@ -21,19 +22,22 @@ public class Letter : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             Selecting();
-
-            //setting the material to the new one
-            renderers.sharedMaterial = materials[1];
+            if (renderers != null)
+            {
+                //setting the material to the new one
+                renderers.sharedMaterial = materials[1];
+            }
         }
     }
 
     private void OnTriggerExit(Collider collider)
     {
+        //if touched by player
         if (collider.gameObject.tag == "Player")
         {
             if (renderers != null)
             {
-                //resetting the material to the origional one
+                //resetting the material to the origonal one
                 renderers.sharedMaterial = materials[0];
             }
         }
@@ -44,6 +48,7 @@ public class Letter : MonoBehaviour
         //when pressing space
         if (Input.GetKey("space"))
         {
+            //get the string name of the object and then destroy
             Debug.Log(gameObject.name);
             Destroy(gameObject);
         }
