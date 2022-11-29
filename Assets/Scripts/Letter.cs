@@ -9,6 +9,7 @@ public class Letter : MonoBehaviour
 
     private void Start()
     {
+        //getting the materials
         renderers = GetComponent<Renderer>();
         renderers.enabled = true;
         renderers.sharedMaterial = materials[0];
@@ -16,11 +17,12 @@ public class Letter : MonoBehaviour
 
     private void OnTriggerStay(Collider collider)
     {
+        //when touching the player
         if (collider.gameObject.tag == "Player")
         {
             Selecting();
-            Debug.Log("now");
 
+            //setting the material to the new one
             renderers.sharedMaterial = materials[1];
         }
     }
@@ -29,6 +31,7 @@ public class Letter : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
+            //resetting the material to the origional one
             renderers.sharedMaterial = materials[0];
         }
     }
@@ -36,7 +39,7 @@ public class Letter : MonoBehaviour
     void Selecting()
     {
         //when pressing space
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKey("space"))
         {
             Debug.Log(gameObject.name);
             Destroy(gameObject);
