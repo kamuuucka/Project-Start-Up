@@ -77,19 +77,19 @@ public class LettersAreaData : MonoBehaviour
                 if (j == 3) letterXChange = 0.0f;
                 
                 //Load random letters if see those values
-                if (array.GetCell(i,j).Equals("0") || array.GetCell(i,j).Equals(""))
+                if (array.GetCell(j,i).Equals("0") || array.GetCell(j,i).Equals(""))
                 {
                     //Debug.Log("Found the random letter");
                     //Load random letter using ASCII code, it needs to be string later, because we have an array of strings
                     randomLetter = (char)rnd.Next(65, 91);
-                    array.SetCell(i, j, randomLetter.ToString());
+                    array.SetCell(j, i, randomLetter.ToString());
                 }
                 
                 //Debug.Log("Coords: " + x + " : " + z);
 
                 //Set the spawnpoint for the objects, set its name, create it and set the parent (usefull for deleting children later)
                 Vector3 spawnPoint = new Vector3(letterXChange, 0.55f, letterZChange);
-                letterPrefab.name = array.GetCell(i, j);
+                letterPrefab.name = array.GetCell(j, i);
                 GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
                 letter.name = letter.name.Replace("(Clone)", "").Trim();
                 letter.transform.parent = this.transform;
