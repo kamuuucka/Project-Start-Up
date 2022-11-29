@@ -32,7 +32,7 @@ public class LettersAreaData : MonoBehaviour
     public float spaceLetters = 2.6f;
 
     private char randomLetter;
-    private int levelNumber = 1;
+    private int levelNumber = 0;
 
     private void Start()
     {

@@ -839,17 +839,17 @@ MonoBehaviour:
     cellSize: {x: 64, y: 16}
     cells:
     - row:
-      - 
-      - 
-      - 
+      - A
+      - B
+      - C
       - 
       - 
       - 
       - 
     - row:
-      - 
-      - 
-      - 
+      - A
+      - B
+      - C
       - 
       - 
       - 
