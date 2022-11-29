@@ -31,8 +31,11 @@ public class Letter : MonoBehaviour
     {
         if (collider.gameObject.tag == "Player")
         {
-            //resetting the material to the origional one
-            renderers.sharedMaterial = materials[0];
+            if (renderers != null)
+            {
+                //resetting the material to the origional one
+                renderers.sharedMaterial = materials[0];
+            }
         }
     }
 
