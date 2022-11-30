@@ -7,15 +7,33 @@ using UnityEngine.UI;
 public class Letter : MonoBehaviour
 {
     public Material[] materials;
+    List<GameObject> alphabet = new List<GameObject>();
     Renderer renderers;
+    GameObject letterWithSprite;
 
-    
+    //public GameObject parent;
+
+
+
+    private void Awake()
+    {
+
+
+
+    }
+
     private void Start()
     {
         //getting the materials
-        renderers = GetComponent<Renderer>();
-        renderers.enabled = true;
-        renderers.sharedMaterial = materials[0];
+        GetAllProducts();
+        if (letterWithSprite != null)
+        {
+            letterWithSprite.SetActive(true);
+            renderers = letterWithSprite.GetComponent<Renderer>();
+            Debug.Log(renderers);
+            renderers.enabled = true;
+            renderers.sharedMaterial = materials[0];
+        }  
     }
 
     private void OnTriggerStay(Collider collider)
@@ -24,11 +42,13 @@ public class Letter : MonoBehaviour
         if (collider.gameObject.tag == "Player")
         {
             Selecting();
+
+            //setting the material to the new one
             if (renderers != null)
             {
-                //setting the material to the new one
                 renderers.sharedMaterial = materials[1];
             }
+            
         }
     }
 
@@ -50,13 +70,30 @@ public class Letter : MonoBehaviour
         //when pressing space
         if (Input.GetKey("space"))
         {
-            //get the string name of the object and then destroy
-
-            Debug.Log(gameObject.name);
-
-
-
-            Destroy(gameObject);
+            if (letterWithSprite!= null)
+            {
+                Debug.Log(letterWithSprite.name);
+                Destroy(gameObject);
+            }
+            
         }
+    }
+
+    public void GetAllProducts()
+    {
+        foreach (Transform tr in this.GetComponentsInChildren<Transform>(true))
+        {
+            if (tr.name.Equals(this.name) && (tr != this.transform))
+            {
+                letterWithSprite = tr.gameObject;
+            }
+
+        }
+        if(letterWithSprite != null)
+        {
+            Debug.Log(letterWithSprite.name);
+            Debug.Log("End of list");
+        }
+        
     }
 }
