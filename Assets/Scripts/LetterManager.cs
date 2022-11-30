@@ -8,7 +8,7 @@ public class LetterManager : MonoBehaviour
     public GameObject[] letterPlacement = new GameObject[9];
     private List<GameObject> word = new List<GameObject>();
 
-    public int placeSelector = 0;
+    //public int placeSelector = 0;
     private int amount = 0;
 
     void Awake()
