@@ -26,14 +26,18 @@ public class LettersAreaData : MonoBehaviour
     //Starting position for the letters
     public float letterX = -7.8f;
     public float letterZ = -7.8f;
+    private float letterXChange;
+    private float letterZChange;
     //How big the space between letters has to be
     public float spaceLetters = 2.6f;
 
     private char randomLetter;
-    private int levelNumber = 1;
+    private int levelNumber = 0;
 
     private void Start()
     {
+        letterXChange = letterX;
+        letterZChange = letterZ;
         AddToList(letterArray, letterArray2, letterArray3, letterArray4, letterArray5);
         loadLetters(listOfLevels[levelNumber]);
     }
@@ -59,41 +63,41 @@ public class LettersAreaData : MonoBehaviour
     /// <param name="array"></param>
     private void loadLetters(Array2DString array)
     {
-        letterX = -7.8f;
-        letterZ = -7.8f;
+        letterXChange = letterX;
+        letterZChange = letterZ;
 
         for (int i = 0; i < rows; i++)
         {
             //Because we are using float, the 0 is hard to reach so we are helping the loops :)
-            if (i == 3) letterZ = 0.0f;
+            if (i == 3) letterZChange = 0.0f;
             
             for (int j = 0; j < columns; j++)
             {
                 //Because we are using float, the 0 is hard to reach so we are helping the loops :)
-                if (j == 3) letterX = 0.0f;
+                if (j == 3) letterXChange = 0.0f;
                 
                 //Load random letters if see those values
-                if (array.GetCell(i,j).Equals("0") || array.GetCell(i,j).Equals(""))
+                if (array.GetCell(j,i).Equals("0") || array.GetCell(j,i).Equals(""))
                 {
                     //Debug.Log("Found the random letter");
                     //Load random letter using ASCII code, it needs to be string later, because we have an array of strings
                     randomLetter = (char)rnd.Next(65, 91);
-                    array.SetCell(i, j, randomLetter.ToString());
+                    array.SetCell(j, i, randomLetter.ToString());
                 }
                 
                 //Debug.Log("Coords: " + x + " : " + z);
 
                 //Set the spawnpoint for the objects, set its name, create it and set the parent (usefull for deleting children later)
-                Vector3 spawnPoint = new Vector3(letterX, 0.55f, letterZ);
-                letterPrefab.name = array.GetCell(i, j);
+                Vector3 spawnPoint = new Vector3(letterXChange, 0.55f, letterZChange);
+                letterPrefab.name = array.GetCell(j, i);
                 GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
                 letter.name = letter.name.Replace("(Clone)", "").Trim();
                 letter.transform.parent = this.transform;
                 
-                letterX += 2.6f;
+                letterXChange += spaceLetters;
             }
-            letterZ += 2.6f;
-            letterX = -7.8f;
+            letterZChange += spaceLetters;
+            letterXChange = letterX;
         }
     }
 
