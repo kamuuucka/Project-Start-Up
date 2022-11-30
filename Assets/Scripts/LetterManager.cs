@@ -5,7 +5,7 @@ public class LetterManager : MonoBehaviour
 {
     public GameObject[] letterPlacement = new GameObject[9];
     public List<string> correctAnswers = new List<string>();
-    
+
     private List<GameObject> word = new List<GameObject>();
     private LettersAreaData levelData;
 
@@ -15,39 +15,29 @@ public class LetterManager : MonoBehaviour
 
     void Awake()
     {
-        levelData = GetComponent<LettersAreaData>();   
+        levelData = GetComponent<LettersAreaData>();
     }
 
     private void Update()
     {
-
-        // Debug.Log(levelData.GetLevelNumber());
-        //Debug.Log(wordToCheck);
-        Debug.Log("IIIIIII: " + answerNumber);
-            Debug.Log("LEVEL NUMBER: " + levelData.GetLevelNumber());
-            Debug.Log("ANSWER IS: " + correctAnswers[answerNumber]);
-            if (wordToCheck.Equals(correctAnswers[answerNumber]))
+        if (wordToCheck.Equals(correctAnswers[answerNumber]))
+        {
+            if (Input.GetKeyUp(KeyCode.Return))
             {
-                Debug.Log("DONE");
-                if (Input.GetKeyUp(KeyCode.Return))
-                {
-                    wordToCheck = "";
-                    Debug.Log("WORD COLLECTED: " +wordToCheck);
-                    levelData.SetLevelChange(true);
-                    Debug.Log(levelData.GetLevelChange());
-                    amount = 0;
+                wordToCheck = "";
+                levelData.SetLevelChange(true);
+                amount = 0;
                 answerNumber++;
-                }
             }
-            else
+        }
+        else
+        {
+            if (Input.GetKeyUp(KeyCode.Return))
             {
-                Debug.Log("NOPE");
-                if (Input.GetKeyUp(KeyCode.Return))
-                {
-                    LevelReload();
-                }
+                LevelReload();
             }
-        
+        }
+
     }
 
     public void AddToList(GameObject obj)
