@@ -7,18 +7,10 @@ using UnityEngine.UI;
 public class Letter : MonoBehaviour
 {
     public Material[] materials;
-    private List<GameObject> alphabet = new List<GameObject>();
 
     private Renderer renderers;
     private GameObject letterWithSprite;
-
-    public LetterManager letterManager;
-
-
-    private void Awake()
-    {
-        
-    }
+    private LetterManager letterManager;
 
     private void Start()
     {
@@ -30,8 +22,6 @@ public class Letter : MonoBehaviour
             letterWithSprite.SetActive(true);
             renderers = letterWithSprite.GetComponent<Renderer>();
 
-            //Debug.Log(renderers);
-
             renderers.enabled = true;
             renderers.sharedMaterial = materials[0];
         }
@@ -40,7 +30,7 @@ public class Letter : MonoBehaviour
     private void OnTriggerStay(Collider collider)
     {
         //when touching the player
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.CompareTag("Player"))
         {
             Selecting();
 
@@ -59,7 +49,7 @@ public class Letter : MonoBehaviour
         {
             if (renderers != null)
             {
-                //resetting the material to the origonal one
+                //resetting the material to the original one
                 renderers.sharedMaterial = materials[0];
             }
         }
@@ -72,9 +62,7 @@ public class Letter : MonoBehaviour
         {
             if (letterWithSprite != null)
             {
-                //Debug.Log(letterWithSprite.name);
                 PickUp();
-                //Destroy(gameObject);
             }
         }
     }
@@ -88,18 +76,20 @@ public class Letter : MonoBehaviour
                 letterWithSprite = tr.gameObject;
             }
         }
-
-        if (letterWithSprite != null)
-        {
-            //Debug.Log(letterWithSprite.name);
-            //Debug.Log("End of list");
-        }
     }
 
     private void PickUp()
     {
-        transform.position = letterManager.letterPlacement[letterManager.getAmount()].transform.position;
-        letterManager.SetAmount();
-        letterManager.AddToList(this.gameObject);
+        if (letterManager.GetAmount() < 9)
+        {
+            transform.position = letterManager.letterPlacement[letterManager.GetAmount()].transform.position;
+            letterManager.SetAmount();
+            letterManager.AddToList(this.gameObject);
+        }
+        else
+        {
+            Debug.Log("There is no more space on the shelf!");
+            letterManager.LevelReload();
+        }
     }
 }

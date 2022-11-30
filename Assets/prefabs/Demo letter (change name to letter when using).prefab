@@ -139,7 +139,6 @@ MonoBehaviour:
   materials:
   - {fileID: 2100000, guid: bae4b7900402a834d8b9916c30b78f4d, type: 2}
   - {fileID: 2100000, guid: 04950182add440a40bd30c168d70bba9, type: 2}
-  letterManager: {fileID: 0}
 --- !u!1001 &138794265275893510
 PrefabInstance:
   m_ObjectHideFlags: 0

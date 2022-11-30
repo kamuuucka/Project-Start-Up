@@ -1856,7 +1856,8 @@ MonoBehaviour:
       - 
   letterX: -7.8
   letterZ: -7.8
-  spaceLetters: 2.6
+  spaceLettersRows: 2.6
+  spaceLettersColumns: 2.6
 --- !u!114 &1973051309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,7 +1883,9 @@ MonoBehaviour:
   correctAnswers:
   - KAMA
   - EGG
-  placeSelector: 0
+  - BUSH
+  - JERRY
+  - COX
 --- !u!1 &2059394231
 GameObject:
   m_ObjectHideFlags: 0

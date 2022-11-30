@@ -7,9 +7,9 @@ using Array2DEditor;
 public class LettersAreaData : MonoBehaviour
 {
     public GameObject letterPrefab;
-    private System.Random rnd = new System.Random();
+    
 
-    private List<Array2DString> listOfLevels = new List<Array2DString>();
+    
 
     //Arays of letters (visible in the inspector)
     public Array2DString testArray;
@@ -19,35 +19,39 @@ public class LettersAreaData : MonoBehaviour
     public Array2DString letterArray4;
     public Array2DString letterArray5;
 
-    
-    private Dictionary<Array2DString, string> answers;
-
-    //The rows and columns have to be the same as the arrayLevel arrays [rows, columns]
-    private int rows = 7;
-    private int columns = 7;
-
     //Starting position for the letters
     public float letterX = -7.8f;
     public float letterZ = -7.8f;
+    
+    //How big the space between letters has to be
+    public float spaceLettersRows = 2.6f;
+    public float spaceLettersColumns = 2.6f;
+
+    private List<Array2DString> listOfLevels = new();
     private float letterXChange;
     private float letterZChange;
-    //How big the space between letters has to be
-    public float spaceLetters = 2.6f;
-
     private char randomLetter;
     private int levelNumber = 0;
+    private bool changeLevel = false;
+    private bool reloadLevel = false;
+
+    //The rows and columns have to be the same as the arrayLevel arrays [rows, columns]
+    private readonly int rows = 7;
+    private readonly int columns = 7;
+    private readonly System.Random rnd = new System.Random();
 
     private void Start()
     {
         letterXChange = letterX;
         letterZChange = letterZ;
         AddToList(letterArray, letterArray2, letterArray3, letterArray4, letterArray5);
-        loadLetters(listOfLevels[levelNumber]);
+        LoadLetters(listOfLevels[levelNumber]);
     }
     private void Update()
     {
+        //Debug.Log(changeLevel);
         //By pressing Enter, you reset the board - to be changed later
-        if (Input.GetKeyUp(KeyCode.Return))
+        if (changeLevel || Input.GetKeyUp(KeyCode.R))
         {
             KillTheYounglings();
             //Debug.Log(levelNumber);
@@ -56,7 +60,14 @@ public class LettersAreaData : MonoBehaviour
             {
                 levelNumber = 4;
             }
-            loadLetters(listOfLevels[levelNumber]);
+            LoadLetters(listOfLevels[levelNumber]);
+            SetLevelChange(false);
+            Debug.Log(changeLevel);
+        } else if (reloadLevel)
+        {
+            KillTheYounglings();
+            LoadLetters(listOfLevels[levelNumber]);
+            SetLevelReload(false);
         }
     }
 
@@ -64,7 +75,7 @@ public class LettersAreaData : MonoBehaviour
     /// Code responsible for loading letter objects with desired names (as written in the inspector)
     /// </summary>
     /// <param name="array"></param>
-    private void loadLetters(Array2DString array)
+    private void LoadLetters(Array2DString array)
     {
         letterXChange = letterX;
         letterZChange = letterZ;
@@ -87,8 +98,6 @@ public class LettersAreaData : MonoBehaviour
                     randomLetter = (char)rnd.Next(65, 91);
                     array.SetCell(j, i, randomLetter.ToString());
                 }
-                
-                //Debug.Log("Coords: " + x + " : " + z);
 
                 //Set the spawnpoint for the objects, set its name, create it and set the parent (usefull for deleting children later)
                 Vector3 spawnPoint = new Vector3(letterXChange, 0.55f, letterZChange);
@@ -97,9 +106,9 @@ public class LettersAreaData : MonoBehaviour
                 letter.name = letter.name.Replace("(Clone)", "").Trim();
                 letter.transform.parent = this.transform;
                 
-                letterXChange += spaceLetters;
+                letterXChange += spaceLettersColumns;
             }
-            letterZChange += spaceLetters;
+            letterZChange += spaceLettersRows;
             letterXChange = letterX;
         }
     }
@@ -120,13 +129,23 @@ public class LettersAreaData : MonoBehaviour
         }
     }
 
-    public List<Array2DString> getListOfLevels()
-    {
-        return listOfLevels;
-    }
-
-    public int getLevelNumber()
+    public int GetLevelNumber()
     {
         return levelNumber;
+    }
+
+    public void SetLevelChange(bool levelStatus)
+    {
+        changeLevel = levelStatus;
+    }
+
+    public bool GetLevelChange()
+    {
+        return changeLevel;
+    }
+
+    public void SetLevelReload(bool levelStatus)
+    {
+        reloadLevel = levelStatus;
     }
 }

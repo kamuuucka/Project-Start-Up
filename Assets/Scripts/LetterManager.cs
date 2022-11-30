@@ -1,42 +1,53 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
-using Array2DEditor;
 
 public class LetterManager : MonoBehaviour
 {
     public GameObject[] letterPlacement = new GameObject[9];
     public List<string> correctAnswers = new List<string>();
-    private List<Array2DString> levels;
     
     private List<GameObject> word = new List<GameObject>();
     private LettersAreaData levelData;
 
-    public int placeSelector = 0;
     private int amount = 0;
+    private int answerNumber = 0;
     private string wordToCheck = "";
 
     void Awake()
     {
-        levelData = GetComponent<LettersAreaData>();
-        
+        levelData = GetComponent<LettersAreaData>();   
     }
 
     private void Update()
     {
-        for (int i = 0; i <= levelData.getLevelNumber(); i++)
-        {
-            if (wordToCheck.Equals(correctAnswers[i]))
+
+        // Debug.Log(levelData.GetLevelNumber());
+        //Debug.Log(wordToCheck);
+        Debug.Log("IIIIIII: " + answerNumber);
+            Debug.Log("LEVEL NUMBER: " + levelData.GetLevelNumber());
+            Debug.Log("ANSWER IS: " + correctAnswers[answerNumber]);
+            if (wordToCheck.Equals(correctAnswers[answerNumber]))
             {
                 Debug.Log("DONE");
-                wordToCheck = "";
+                if (Input.GetKeyUp(KeyCode.Return))
+                {
+                    wordToCheck = "";
+                    Debug.Log("WORD COLLECTED: " +wordToCheck);
+                    levelData.SetLevelChange(true);
+                    Debug.Log(levelData.GetLevelChange());
+                    amount = 0;
+                answerNumber++;
+                }
             }
             else
             {
                 Debug.Log("NOPE");
+                if (Input.GetKeyUp(KeyCode.Return))
+                {
+                    LevelReload();
+                }
             }
-        }
+        
     }
 
     public void AddToList(GameObject obj)
@@ -45,7 +56,7 @@ public class LetterManager : MonoBehaviour
         wordToCheck += obj.name;
     }
 
-    public int getAmount()
+    public int GetAmount()
     {
         return amount;
     }
@@ -53,5 +64,12 @@ public class LetterManager : MonoBehaviour
     public void SetAmount()
     {
         amount++;
+    }
+
+    public void LevelReload()
+    {
+        levelData.SetLevelReload(true);
+        amount = 0;
+        wordToCheck = "";
     }
 }
