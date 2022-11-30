@@ -13,11 +13,11 @@ public class LetterManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("stuff");
+        //Debug.Log("stuff");
 
         for (int i = 0; i < letterPlacement.Length; i++)
         {
-            Debug.Log(letterPlacement[i].transform.position);
+            //Debug.Log(letterPlacement[i].transform.position);
         }
     }
 
