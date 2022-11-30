@@ -1,32 +1,52 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class LetterManager : MonoBehaviour
 {
     public GameObject[] letterPlacement = new GameObject[9];
-    private List<GameObject> word = new List<GameObject>();
+    public List<string> correctAnswers = new List<string>();
 
-    //public int placeSelector = 0;
+    private List<GameObject> word = new List<GameObject>();
+    private LettersAreaData levelData;
+
     private int amount = 0;
+    private int answerNumber = 0;
+    private string wordToCheck = "";
 
     void Awake()
     {
-        //Debug.Log("stuff");
+        levelData = GetComponent<LettersAreaData>();
+    }
 
-        for (int i = 0; i < letterPlacement.Length; i++)
+    private void Update()
+    {
+        if (wordToCheck.Equals(correctAnswers[answerNumber]))
         {
-            //Debug.Log(letterPlacement[i].transform.position);
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                wordToCheck = "";
+                levelData.SetLevelChange(true);
+                amount = 0;
+                answerNumber++;
+            }
         }
+        else
+        {
+            if (Input.GetKeyUp(KeyCode.Return))
+            {
+                LevelReload();
+            }
+        }
+
     }
 
     public void AddToList(GameObject obj)
     {
         word.Add(obj);
+        wordToCheck += obj.name;
     }
 
-    public int getAmount()
+    public int GetAmount()
     {
         return amount;
     }
@@ -34,5 +54,12 @@ public class LetterManager : MonoBehaviour
     public void SetAmount()
     {
         amount++;
+    }
+
+    public void LevelReload()
+    {
+        levelData.SetLevelReload(true);
+        amount = 0;
+        wordToCheck = "";
     }
 }
