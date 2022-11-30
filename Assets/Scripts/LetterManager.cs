@@ -30,6 +30,7 @@ public class LetterManager : MonoBehaviour
             if (wordToCheck.Equals(correctAnswers[i]))
             {
                 Debug.Log("DONE");
+                wordToCheck = "";
             }
             else
             {

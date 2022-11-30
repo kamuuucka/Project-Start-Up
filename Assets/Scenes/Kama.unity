@@ -1881,6 +1881,7 @@ MonoBehaviour:
   - {fileID: 1321806511}
   correctAnswers:
   - KAMA
+  - EGG
   placeSelector: 0
 --- !u!1 &2059394231
 GameObject:
