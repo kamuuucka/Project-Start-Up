@@ -98,6 +98,7 @@ public class Letter : MonoBehaviour
     private void PickUp()
     {
         transform.position = letterManager.letterPlacement[letterManager.getAmount()].transform.position;
+        transform.localScale = letterManager.letterPlacement[letterManager.getAmount()].transform.localScale;
         letterManager.SetAmount();
     }
 }
