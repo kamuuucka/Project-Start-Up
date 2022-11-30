@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
         {
             currentTime += Time.deltaTime;
 
-            timerText.text = currentTime.ToString("f2");
+            timerText.text = currentTime.ToString("f2").Replace(",",":");
         }
 
         if (Input.GetKeyDown(KeyCode.P))

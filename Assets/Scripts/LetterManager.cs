@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LetterManager : MonoBehaviour
 {
@@ -24,6 +25,10 @@ public class LetterManager : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
+                if(answerNumber == 4)
+                {
+                    SceneManager.LoadScene(0);
+                }
                 wordToCheck = "";
                 levelData.SetLevelChange(true);
                 amount = 0;
