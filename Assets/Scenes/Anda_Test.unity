@@ -1354,9 +1354,9 @@ MonoBehaviour:
       - 
       - 
       - 
-  letterX: -7.8
-  letterZ: -7.8
-  spaceLetters: 2.6
+  letterX: -15
+  letterZ: -15
+  spaceLetters: 6
 --- !u!4 &375531932
 Transform:
   m_ObjectHideFlags: 0
