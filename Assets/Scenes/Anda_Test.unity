@@ -1300,23 +1300,23 @@ MonoBehaviour:
     cells:
     - row:
       - 
-      - 
+      - E
       - 
       - 
       - E
       - N
       - 
     - row:
-      - W
-      - R
-      - O
+      - 
+      - T
+      - 
       - T
       - E
       - E
       - 
     - row:
       - 
-      - 
+      - O
       - I
       - 
       - V
@@ -1332,7 +1332,7 @@ MonoBehaviour:
       - 
     - row:
       - W
-      - 
+      - W
       - 
       - W
       - R
