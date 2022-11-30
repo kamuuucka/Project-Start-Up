@@ -7,19 +7,17 @@ using UnityEngine.UI;
 public class Letter : MonoBehaviour
 {
     public Material[] materials;
-    List<GameObject> alphabet = new List<GameObject>();
-    Renderer renderers;
-    GameObject letterWithSprite;
+    private List<GameObject> alphabet = new List<GameObject>();
 
-    //public GameObject parent;
+    private Renderer renderers;
+    private GameObject letterWithSprite;
 
+    public LetterManager letterManager;
 
 
     private void Awake()
     {
-
-
-
+        letterManager = GetComponentInParent<LetterManager>();
     }
 
     private void Start()
@@ -30,10 +28,12 @@ public class Letter : MonoBehaviour
         {
             letterWithSprite.SetActive(true);
             renderers = letterWithSprite.GetComponent<Renderer>();
-            Debug.Log(renderers);
+
+            //Debug.Log(renderers);
+
             renderers.enabled = true;
             renderers.sharedMaterial = materials[0];
-        }  
+        }
     }
 
     private void OnTriggerStay(Collider collider)
@@ -48,7 +48,6 @@ public class Letter : MonoBehaviour
             {
                 renderers.sharedMaterial = materials[1];
             }
-            
         }
     }
 
@@ -65,17 +64,17 @@ public class Letter : MonoBehaviour
         }
     }
 
-    void Selecting()
+    private void Selecting()
     {
         //when pressing space
         if (Input.GetKey("space"))
         {
-            if (letterWithSprite!= null)
+            if (letterWithSprite != null)
             {
-                Debug.Log(letterWithSprite.name);
-                Destroy(gameObject);
+                //Debug.Log(letterWithSprite.name);
+                PickUp();
+                //Destroy(gameObject);
             }
-            
         }
     }
 
@@ -87,13 +86,18 @@ public class Letter : MonoBehaviour
             {
                 letterWithSprite = tr.gameObject;
             }
+        }
 
-        }
-        if(letterWithSprite != null)
+        if (letterWithSprite != null)
         {
-            Debug.Log(letterWithSprite.name);
-            Debug.Log("End of list");
+            //Debug.Log(letterWithSprite.name);
+            //Debug.Log("End of list");
         }
-        
+    }
+
+    private void PickUp()
+    {
+        transform.position = letterManager.letterPlacement[letterManager.getAmount()].transform.position;
+        letterManager.SetAmount();
     }
 }
