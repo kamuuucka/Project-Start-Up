@@ -1,30 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 public class LetterManager : MonoBehaviour
 {
-    public static LetterManager instance;
+    public GameObject[] letterPlacement = new GameObject[9];
+    public int placeSelector = 0;
 
-
-    private void Awake()
+    void Awake()
     {
-        if(instance == null)
-            instance = this;
-        else
+        Debug.Log("stuff");
+
+        for (int i = 0; i < letterPlacement.Length; i++)
         {
-            Destroy(gameObject);
+            Debug.Log(letterPlacement[i].transform.position);
+
         }
-    }
-
-    void Start()
-    {
-        
-    }
-
-
-    void textUpdate()
-    {
-        
     }
 }

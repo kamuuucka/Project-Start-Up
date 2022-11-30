@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Letter : MonoBehaviour
     public Material[] materials;
     Renderer renderers;
 
+    
     private void Start()
     {
         //getting the materials
@@ -49,7 +51,11 @@ public class Letter : MonoBehaviour
         if (Input.GetKey("space"))
         {
             //get the string name of the object and then destroy
+
             Debug.Log(gameObject.name);
+
+
+
             Destroy(gameObject);
         }
     }
