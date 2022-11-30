@@ -19,6 +19,9 @@ public class LettersAreaData : MonoBehaviour
     public Array2DString letterArray4;
     public Array2DString letterArray5;
 
+    
+    private Dictionary<Array2DString, string> answers;
+
     //The rows and columns have to be the same as the arrayLevel arrays [rows, columns]
     private int rows = 7;
     private int columns = 7;
@@ -47,7 +50,7 @@ public class LettersAreaData : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Return))
         {
             KillTheYounglings();
-            Debug.Log(levelNumber);
+            //Debug.Log(levelNumber);
             levelNumber++;
             if (levelNumber > 4)
             {
@@ -115,5 +118,15 @@ public class LettersAreaData : MonoBehaviour
         {
             listOfLevels.Add(list[i]);
         }
+    }
+
+    public List<Array2DString> getListOfLevels()
+    {
+        return listOfLevels;
+    }
+
+    public int getLevelNumber()
+    {
+        return levelNumber;
     }
 }

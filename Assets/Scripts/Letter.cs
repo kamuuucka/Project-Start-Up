@@ -17,11 +17,12 @@ public class Letter : MonoBehaviour
 
     private void Awake()
     {
-        letterManager = GetComponentInParent<LetterManager>();
+        
     }
 
     private void Start()
     {
+        letterManager = GetComponentInParent<LetterManager>();
         //getting the materials
         GetAllProducts();
         if (letterWithSprite != null)
@@ -99,5 +100,6 @@ public class Letter : MonoBehaviour
     {
         transform.position = letterManager.letterPlacement[letterManager.getAmount()].transform.position;
         letterManager.SetAmount();
+        letterManager.AddToList(this.gameObject);
     }
 }
