@@ -7,9 +7,6 @@ using Array2DEditor;
 public class LettersAreaData : MonoBehaviour
 {
     public GameObject letterPrefab;
-    
-
-    
 
     //Arays of letters (visible in the inspector)
     public Array2DString testArray;
@@ -18,6 +15,10 @@ public class LettersAreaData : MonoBehaviour
     public Array2DString letterArray3;
     public Array2DString letterArray4;
     public Array2DString letterArray5;
+
+    public LetterFieldSO question1;
+
+    //SO alphabet that contains all the letters
 
     //Starting position for the letters
     public float letterX = -7.8f;
@@ -83,7 +84,11 @@ public class LettersAreaData : MonoBehaviour
         for (int i = 0; i < rows; i++)
         {
             //Because we are using float, the 0 is hard to reach so we are helping the loops :)
-            if (i == 3) letterZChange = 0.0f;
+            if (i == 0) letterZChange = 0.0f;
+            if (i >= 1 && i <= 3)
+            {
+                //z is 
+            }
             
             for (int j = 0; j < columns; j++)
             {

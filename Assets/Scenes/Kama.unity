@@ -864,6 +864,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: LettersSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: question1
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ac96de932d9b31488083c8a1f9ea216,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceace7a4100cd204e918831412f36f6d, type: 3}
 --- !u!1001 &8649346699226684508
