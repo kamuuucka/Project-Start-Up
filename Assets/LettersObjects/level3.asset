@@ -10,68 +10,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e13783461578e1244b8b9c8486f1c62d, type: 3}
-  m_Name: level2
+  m_Name: level3
   m_EditorClassIdentifier: 
   letters:
     gridSize: {x: 7, y: 7}
     cellSize: {x: 64, y: 16}
     cells:
     - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
+      - W
+      - N
+      - G
+      - I
+      - A
+      - S
       - B
+    - row:
+      - D
+      - M
+      - T
+      - A
+      - G
+      - R
+      - D
+    - row:
+      - N
+      - J
+      - R
+      - M
+      - C
       - O
+      - Q
+    - row:
+      - V
+      - K
+      - M
+      - G
+      - D
+      - L
+      - J
+    - row:
+      - A
+      - C
+      - Y
+      - N
+      - W
+      - Q
+      - A
+    - row:
+      - D
+      - U
       - O
-      - 
-      - 
+      - E
+      - B
+      - D
+      - O
     - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  correctAnswer: BOO
+      - A
+      - N
+      - S
+      - W
+      - E
+      - R
+      - X
+  correctAnswer: DUO
   letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
     type: 3}

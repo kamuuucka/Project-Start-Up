@@ -865,7 +865,7 @@ PrefabInstance:
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: questions.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
@@ -878,6 +878,12 @@ PrefabInstance:
       propertyPath: questions.Array.data[1]
       value: 
       objectReference: {fileID: 11400000, guid: c6e81402b5ec5544685df607298ea00d,
+        type: 2}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: questions.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 39ba5852b7fab2944aaab8e592dbd8d1,
         type: 2}
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
