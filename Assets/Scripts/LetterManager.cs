@@ -27,7 +27,8 @@ public class LetterManager : MonoBehaviour
             {
                 if(answerNumber == 4)
                 {
-                    SceneManager.LoadScene(0);
+                    //SceneManager.LoadScene(0);
+                    Debug.Log("FINISHED");
                 }
                 wordToCheck = "";
                 levelData.SetLevelChange(true);
