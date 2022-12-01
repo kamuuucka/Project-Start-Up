@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 261.8028, g: 324.33075, b: 429.2505, a: 1}
+  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1309,7 +1309,7 @@ GameObject:
   - component: {fileID: 1913348890}
   - component: {fileID: 1913348889}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,8 +1349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895357ead85097f4fbd1cfb87e00aaa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stopped: 1
   currentTime: 0
   timerText: {fileID: 22715291}
+  timerTextEnd: {fileID: 0}
 --- !u!114 &1913348890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1812,6 +1814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4add97c54b616e64caf199763e0204e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 1913348889}
   letterPlacement:
   - {fileID: 607267466}
   - {fileID: 607267465}

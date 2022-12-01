@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] float currentTime;
     [SerializeField] TMP_Text timerText;
+    [SerializeField] TMP_Text timerTextEnd;
 
 
     void Start()
@@ -19,29 +20,30 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        /*        if (Input.GetKey(KeyCode.T))
-                {
-                    stopped = false;
-                }*/
-
         if (stopped)
         {
-            Debug.Log("timer stopped");
-            Debug.Log(currentTime.ToString());
+            if (timerTextEnd != null)
+            {
+                timerTextEnd.text = PlayerPrefs.GetString("timer");
+            }
         }
 
         if (!stopped)
         {
             currentTime += Time.deltaTime;
 
-            timerText.text = currentTime.ToString("f2").Replace(",", ":");
+            if (timerText != null)
+            {
+                timerText.text = currentTime.ToString("f2").Replace(",", ":");
+            }
+
+            PlayerPrefs.SetString("timer", currentTime.ToString("f2").Replace(",", ":"));
         }
     }
 
     public string GetTime()
     {
         return currentTime.ToString();
-
     }
 
     public bool GetBool()
@@ -52,15 +54,5 @@ public class Timer : MonoBehaviour
     public void SetBool(bool value)
     {
         stopped = value;
-
-/*        if (value == true)
-        {
-            Debug.Log("timer stopped");
-        }*/
-
-        if (value == false)
-        {
-            Debug.Log("timer started");
-        }
     }
 }

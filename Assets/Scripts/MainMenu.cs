@@ -17,11 +17,13 @@ public class MainMenu : MonoBehaviour
 
     public void GoMainMenu()
     {
+        PlayerPrefs.DeleteKey("timer");
         SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
     {
+        PlayerPrefs.DeleteKey("timer");
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
         #endif
