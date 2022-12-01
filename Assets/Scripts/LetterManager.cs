@@ -14,15 +14,21 @@ public class LetterManager : MonoBehaviour
     private int answerNumber = 0;
     private string wordToCheck = "";
 
+    //new
+    public GameObject AudioObject;
+   
+
     void Awake()
     {
-        levelData = GetComponent<LettersAreaData>();
+        levelData = GetComponent<LettersAreaData>();         
     }
 
     private void Update()
     {
         if (wordToCheck.Equals(correctAnswers[answerNumber]))
         {
+            
+
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 if(answerNumber == 4)
@@ -33,6 +39,8 @@ public class LetterManager : MonoBehaviour
                 levelData.SetLevelChange(true);
                 amount = 0;
                 answerNumber++;
+                //new
+                AudioObject.SetActive(true);
             }
         }
         else
@@ -63,6 +71,7 @@ public class LetterManager : MonoBehaviour
 
     public void LevelReload()
     {
+        AudioObject.SetActive(false);
         levelData.SetLevelReload(true);
         amount = 0;
         wordToCheck = "";
