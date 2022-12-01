@@ -73,3 +73,5 @@ MonoBehaviour:
       - 
       - 
   correctAnswer: 
+  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
+    type: 3}

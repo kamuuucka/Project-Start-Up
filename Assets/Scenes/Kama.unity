@@ -845,13 +845,40 @@ PrefabInstance:
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: letterX
-      value: -7.8
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: letterZ
-      value: 7.8
+      value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: spaceLettersRows
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: spaceLettersColumns
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: questions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: questions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ac96de932d9b31488083c8a1f9ea216,
+        type: 2}
+    - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: questions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: c6e81402b5ec5544685df607298ea00d,
+        type: 2}
     - target: {fileID: 7586704539066114102, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: letterArray.cells.Array.data[0].row.Array.data[0]

@@ -26,22 +26,21 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-
-        if (wordToCheck.Equals(correctAnswers[answerNumber]))
+        Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+        if (levelData.GetLastLevel())
+        {
+            timer.SetBool(true);
+            Debug.Log(timer.GetTime());
+            SceneManager.LoadScene(3);
+        }
+        else if (levelData.CorrectWord(wordToCheck))
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
-                if (answerNumber == 4)
-                {
-                    timer.SetBool(true);
-                    Debug.Log(timer.GetTime());
-
-                    SceneManager.LoadScene(3);
-                }
+                
                 wordToCheck = "";
                 levelData.SetLevelChange(true);
                 amount = 0;
-                answerNumber++;
             }
         }
         else
