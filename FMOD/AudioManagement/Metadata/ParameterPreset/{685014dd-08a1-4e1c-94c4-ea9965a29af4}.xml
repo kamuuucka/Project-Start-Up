@@ -20,7 +20,7 @@
 		</property>
 		<property name="enumerationLabels">
 			<value>Correct</value>
-			<value>Value B</value>
+			<value>NotCorrect</value>
 			<value>Value C</value>
 			<value>Value D</value>
 			<value>Value E</value>

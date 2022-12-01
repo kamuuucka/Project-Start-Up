@@ -15,8 +15,8 @@ public class LetterManager : MonoBehaviour
     private string wordToCheck = "";
 
     //new
-    public GameObject AudioObject;
-   
+    public GameObject Correct;
+    public GameObject Wrong;
 
     void Awake()
     {
@@ -40,13 +40,16 @@ public class LetterManager : MonoBehaviour
                 amount = 0;
                 answerNumber++;
                 //new
-                AudioObject.SetActive(true);
+                Correct.SetActive(true);
+                Correct.SetActive(false);
             }
         }
         else
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
+                Wrong.SetActive(true);
+                Wrong.SetActive(false);
                 LevelReload();
             }
         }
@@ -71,7 +74,7 @@ public class LetterManager : MonoBehaviour
 
     public void LevelReload()
     {
-        AudioObject.SetActive(false);
+        Correct.SetActive(false);
         levelData.SetLevelReload(true);
         amount = 0;
         wordToCheck = "";
