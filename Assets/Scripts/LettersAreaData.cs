@@ -16,15 +16,13 @@ public class LettersAreaData : MonoBehaviour
     public Array2DString letterArray4;
     public Array2DString letterArray5;
 
-    public LetterFieldSO question1;
+    //public LetterFieldSO question1;
 
     //SO alphabet that contains all the letters
 
     //Starting position for the letters
     public int letterX = -7;
     public int letterZ = -7;
-    public float startX = 0.0f;
-    public float startZ = 0.0f;
     
     //How big the space between letters has to be
     public int spaceLettersRows = 2;
