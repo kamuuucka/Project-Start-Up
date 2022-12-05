@@ -23,14 +23,6 @@ public class AnimationController : MonoBehaviour
         Mesh.enabled = false;
     }
 
-    private void Update()
-    {
-        if (anim.isPlaying)
-        {
-            Debug.Log("AAAAAA");
-        }
-    }
-
     public void LoadAnimations(string name)
     {
         if (name.Equals(AnimationName))

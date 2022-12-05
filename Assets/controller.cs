@@ -10,7 +10,7 @@ public class Controller : MonoBehaviour
     {
         if (manager.GetLevelDone())
         {
-            Debug.Log("ANIMATION PLAY");
+            //Debug.Log("ANIMATION PLAY");
             animations[manager.GetAnswerNumber() - 1].LoadAnimations(animations[manager.GetAnswerNumber() - 1].AnimationName);
             //Invoke("SetLevelState", 2f);
             manager.SetLevelDone(false);
@@ -20,7 +20,7 @@ public class Controller : MonoBehaviour
 
     private void SetLevelState()
     {
-        Debug.Log("Doing things");
+        //Debug.Log("Doing things");
         manager.SetAnimationPlaying(false);
     }
 }

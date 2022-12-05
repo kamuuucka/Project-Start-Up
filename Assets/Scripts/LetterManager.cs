@@ -28,11 +28,11 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+        //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
         if (levelData.GetLastLevel())
         {
             timer.SetBool(true);
-            Debug.Log(timer.GetTime());
+            //Debug.Log(timer.GetTime());
             SceneManager.LoadScene(3);
         }
         else if (levelData.CorrectWord(wordToCheck))
@@ -42,7 +42,7 @@ public class LetterManager : MonoBehaviour
                 answerNumber++;
                 levelDone = true;
                 animationPlaying = true;
-                Debug.Log(animationPlaying);
+                //Debug.Log(animationPlaying);
                 Invoke("LoadNextLevel", 2f);
             }
         }
