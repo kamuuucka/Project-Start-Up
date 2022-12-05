@@ -7,6 +7,9 @@ using Array2DEditor;
 public class LettersAreaData : MonoBehaviour
 {
     public GameObject letterPrefab;
+    
+
+    
 
     //Arays of letters (visible in the inspector)
     public Array2DString testArray;
@@ -16,17 +19,13 @@ public class LettersAreaData : MonoBehaviour
     public Array2DString letterArray4;
     public Array2DString letterArray5;
 
-    //public LetterFieldSO question1;
-
-    //SO alphabet that contains all the letters
-
     //Starting position for the letters
-    public int letterX = -7;
-    public int letterZ = -7;
+    public float letterX = -7.8f;
+    public float letterZ = -7.8f;
     
     //How big the space between letters has to be
-    public int spaceLettersRows = 2;
-    public int spaceLettersColumns = 2;
+    public float spaceLettersRows = 2.6f;
+    public float spaceLettersColumns = 2.6f;
 
     private List<Array2DString> listOfLevels = new();
     private float letterXChange;
@@ -83,26 +82,13 @@ public class LettersAreaData : MonoBehaviour
 
         for (int i = 0; i < rows; i++)
         {
-            letterXChange = letterX;
-            ////Because we are using float, the 0 is hard to reach so we are helping the loops :)
-            //if (i == 0)
-            //{
-            //    //z = 0
-            //    letterZChange = 0.0f;
-            //}
-            //if (i >= 1 && i <= 3)
-            //{
-            //    //z is smaller than 0
-            //}
-            //if(i>=4 && i<= 6)
-            //{
-            //    //z is bigger than 0
-            //}
+            //Because we are using float, the 0 is hard to reach so we are helping the loops :)
+            if (i == 3) letterZChange = 0.0f;
             
             for (int j = 0; j < columns; j++)
             {
                 //Because we are using float, the 0 is hard to reach so we are helping the loops :)
-              
+                if (j == 3) letterXChange = 0.0f;
                 
                 //Load random letters if see those values
                 if (array.GetCell(j,i).Equals("0") || array.GetCell(j,i).Equals(""))
