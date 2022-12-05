@@ -9,7 +9,6 @@ public class LetterManager : MonoBehaviour
     [SerializeField] private Timer timer;
 
     public GameObject[] letterPlacement = new GameObject[9];
-    public List<string> correctAnswers = new List<string>();
 
     private List<GameObject> word = new List<GameObject>();
     private LettersAreaData levelData;
