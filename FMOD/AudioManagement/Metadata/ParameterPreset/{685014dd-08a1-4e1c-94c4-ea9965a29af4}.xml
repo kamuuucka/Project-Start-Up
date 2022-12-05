@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{685014dd-08a1-4e1c-94c4-ea9965a29af4}">
+		<property name="name">
+			<value>LetterCheck</value>
+		</property>
+		<relationship name="folder">
+			<destination>{1591ff47-ae36-40a1-bd63-43af9351aee5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f7b7c3fd-fd02-4918-bd54-c717f1350019}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f7b7c3fd-fd02-4918-bd54-c717f1350019}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>10</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Correct</value>
+			<value>NotCorrect</value>
+			<value>Value C</value>
+			<value>Value D</value>
+			<value>Value E</value>
+			<value>Value F</value>
+			<value>Value G</value>
+			<value>Value H</value>
+			<value>Value I</value>
+			<value>Value J</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
