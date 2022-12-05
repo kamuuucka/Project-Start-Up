@@ -6,36 +6,53 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    private bool stopped = true;
+    public bool stopped = true;
 
     [SerializeField] float currentTime;
     [SerializeField] TMP_Text timerText;
+    [SerializeField] TMP_Text timerTextEnd;
 
 
     void Start()
     {
         currentTime = 0f;
-
-        // Update is called once per frame
     }
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.T))
+        if (stopped)
         {
-            stopped = false;
+            if (timerTextEnd != null)
+            {
+                timerTextEnd.text = PlayerPrefs.GetString("timer");
+            }
         }
 
         if (!stopped)
         {
             currentTime += Time.deltaTime;
 
-            timerText.text = currentTime.ToString("f2").Replace(",",":");
-        }
+            if (timerText != null)
+            {
+                timerText.text = currentTime.ToString("f2").Replace(",", ":");
+            }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            stopped = true;
+            PlayerPrefs.SetString("timer", currentTime.ToString("f2").Replace(",", ":"));
         }
+    }
+
+    public string GetTime()
+    {
+        return currentTime.ToString();
+    }
+
+    public bool GetBool()
+    {
+        return stopped;
+    }
+
+    public void SetBool(bool value)
+    {
+        stopped = value;
     }
 }
