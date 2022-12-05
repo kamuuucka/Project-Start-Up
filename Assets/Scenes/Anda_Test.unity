@@ -1594,368 +1594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a2d0661a35e28e4390de9f3e3e73278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
-    type: 3}
-  testArray:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  letterArray:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - E
-      - 
-      - R
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - V
-      - 
-      - O
-      - 
-      - R
-      - 
-      - 
-    - row:
-      - O
-      - 
-      - 
-      - 
-      - O
-      - F
-      - 
-    - row:
-      - L
-      - 
-      - 
-      - L
-      - O
-      - A
-      - D
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - P
-      - O
-      - 
-    - row:
-      - B
-      - O
-      - A
-      - R
-      - 
-      - L
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  letterArray2:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - 
-      - 
-      - 
-      - N
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - A
-      - E
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - H
-      - 
-      - M
-      - 
-      - 
-      - 
-    - row:
-      - T
-      - 
-      - C
-      - A
-      - N
-      - 
-      - T
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - E
-      - A
-      - 
-    - row:
-      - O
-      - 
-      - 
-      - 
-      - H
-      - 
-      - 
-    - row:
-      - D
-      - 
-      - 
-      - T
-      - T
-      - 
-      - 
-  letterArray3:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - 
-      - E
-      - T
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - C
-      - 
-      - H
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - A
-      - 
-      - 
-      - E
-      - E
-      - 
-    - row:
-      - 
-      - P
-      - O
-      - U
-      - R
-      - I
-      - 
-    - row:
-      - 
-      - S
-      - 
-      - E
-      - 
-      - 
-      - R
-    - row:
-      - 
-      - W
-      - H
-      - E
-      - R
-      - E
-      - 
-    - row:
-      - 
-      - T
-      - 
-      - 
-      - 
-      - 
-      - 
-  letterArray4:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - 
-      - Z
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - O
-      - 
-      - 
-      - T
-      - O
-      - O
-    - row:
-      - M
-      - O
-      - V
-      - E
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - T
-      - 
-      - 
-      - E
-      - 
-      - O
-    - row:
-      - 
-      - 
-      - 
-      - U
-      - 
-      - W
-      - 
-    - row:
-      - 
-      - 
-      - R
-      - 
-      - T
-      - 
-      - 
-    - row:
-      - 
-      - T
-      - O
-      - U
-      - G
-      - H
-      - 
-  letterArray5:
-    gridSize: {x: 7, y: 7}
-    cellSize: {x: 64, y: 16}
-    cells:
-    - row:
-      - 
-      - E
-      - 
-      - 
-      - E
-      - N
-      - 
-    - row:
-      - 
-      - T
-      - 
-      - T
-      - E
-      - E
-      - 
-    - row:
-      - 
-      - O
-      - I
-      - 
-      - V
-      - T
-      - 
-    - row:
-      - 
-      - R
-      - 
-      - 
-      - O
-      - T
-      - 
-    - row:
-      - W
-      - W
-      - 
-      - W
-      - R
-      - I
-      - 
-    - row:
-      - 
-      - 
-      - O
-      - 
-      - D
-      - R
-      - 
-    - row:
-      - 
-      - L
-      - 
-      - 
-      - 
-      - W
-      - 
+  questions: []
   letterX: -15
   letterZ: -15
   spaceLettersRows: 4
@@ -2946,6 +2585,90 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583898239}
   m_Mesh: {fileID: 3483266606098219321, guid: 4b3f14b1e78357b459fbdc61d8ceb717, type: 3}
+--- !u!1001 &584282460
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1471327090304833076, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: spaceLettersRows
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471327090304833076, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: spaceLettersColumns
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471327090304833077, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1682702675}
+    - target: {fileID: 7907499812292058488, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_Name
+      value: NewLetterSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.68158597
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.824787
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5766373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8634567731317281241, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6dd867897fa0c048b7daabdae4520b8, type: 3}
 --- !u!1 &592410067
 GameObject:
   m_ObjectHideFlags: 0
