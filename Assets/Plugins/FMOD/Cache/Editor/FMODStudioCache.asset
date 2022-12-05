@@ -40,68 +40,6 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3075488
   Exists: 1
---- !u!114 &-1803367837373967345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UserFeedback
-  m_EditorClassIdentifier: 
-  Path: event:/UserFeedback
-  Guid:
-    Data1: -1532800921
-    Data2: 1099069378
-    Data3: 1274489770
-    Data4: -1271637474
-  Banks:
-  - {fileID: 1715025625173548717}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -1670027533300215580}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-1670027533300215580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/UserFeedback/LetterCheck
-  m_EditorClassIdentifier: 
-  Name: LetterCheck
-  StudioPath: 
-  Min: 0
-  Max: 9
-  Default: 0
-  ID:
-    data1: 2968877195
-    data2: 1719870081
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Correct
-  - NotCorrect
-  - Value C
-  - Value D
-  - Value E
-  - Value F
-  - Value G
-  - Value H
-  - Value I
-  - Value J
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,23 +56,13 @@ MonoBehaviour:
   - {fileID: -187215834343880359}
   - {fileID: -187052647157180369}
   EditorEvents:
-<<<<<<< HEAD
   - {fileID: 4541660355650370149}
-=======
-  - {fileID: -4607589478372968234}
-  - {fileID: -1803367837373967345}
->>>>>>> Sounds
   EditorParameters: []
   MasterBanks:
   - {fileID: -187052647157180369}
   StringsBanks:
-<<<<<<< HEAD
   - {fileID: -187215834343880359}
   cacheTime: 638055866611209970
-=======
-  - {fileID: 6955345859762382948}
-  cacheTime: 638055091494757918
->>>>>>> Sounds
   cacheVersion: 131591
 --- !u!114 &4541660355650370149
 MonoBehaviour:
@@ -148,7 +76,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Music
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   Path: event:/Music
   Guid:
     Data1: -1183428734
@@ -166,17 +93,6 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 256235
 --- !u!114 &5077193931931539306
-=======
-  Path: FMOD/AudioManagement/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638055091494727961
-  FileSizes:
-  - Name: Desktop
-    Value: 3092640
-  Exists: 1
---- !u!114 &6955345859762382948
->>>>>>> Sounds
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Music/Playback
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   Name: Playback
   StudioPath: 
   Min: 0
@@ -203,13 +118,4 @@ MonoBehaviour:
   - Value A
   - Value B
   - Value C
-=======
-  Path: FMOD/AudioManagement/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638055091494757918
-  FileSizes:
-  - Name: Desktop
-    Value: 914
->>>>>>> Sounds
   Exists: 1
