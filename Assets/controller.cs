@@ -12,17 +12,15 @@ public class Controller : MonoBehaviour
         {
             Debug.Log("ANIMATION PLAY");
             animations[manager.GetAnswerNumber() - 1].LoadAnimations(animations[manager.GetAnswerNumber() - 1].AnimationName);
-            if (animations[0].animation.IsPlaying(animations[0].AnimationName))
-            {
-                Debug.Log("PLAYING");
-                manager.SetAnimationPlaying(true);
-            }
-            else
-            {
-                Debug.Log("stop");
-                manager.SetLevelDone(false);
-            }
+            //Invoke("SetLevelState", 2f);
+            manager.SetLevelDone(false);
             
         } 
+    }
+
+    private void SetLevelState()
+    {
+        Debug.Log("Doing things");
+        manager.SetAnimationPlaying(false);
     }
 }

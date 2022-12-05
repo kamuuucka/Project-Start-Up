@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &3142403454306099993
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &3169655355208724753
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,6 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &3895647822334763219
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &3934775718787605911
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,6 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &4157137138345479484
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &6721232281600697277
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,6 +951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &7153536863189681378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &7946609674420641218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,6 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationName: 
+  animation: {fileID: 0}
 --- !u!1 &8499189203896192598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,3 +1287,4 @@ MonoBehaviour:
   - {fileID: 2067539661592410224}
   - {fileID: 6772623256179370783}
   - {fileID: 7620710581753252588}
+  manager: {fileID: 0}

@@ -41,14 +41,9 @@ public class LetterManager : MonoBehaviour
             {
                 answerNumber++;
                 levelDone = true;
-                if (!animationPlaying)
-                {
-                    wordToCheck = "";
-                    levelData.SetLevelChange(true);
-                    amount = 0;
-                }
-                
-                //levelDone = false;
+                animationPlaying = true;
+                Debug.Log(animationPlaying);
+                Invoke("LoadNextLevel", 2f);
             }
         }
         else
@@ -103,5 +98,15 @@ public class LetterManager : MonoBehaviour
     public void SetAnimationPlaying(bool value)
     {
         animationPlaying = value;
+        Debug.Log(animationPlaying);
+    }
+
+    private void LoadNextLevel()
+    {
+        Debug.Log(animationPlaying);
+        wordToCheck = "";
+        levelData.SetLevelChange(true);
+        amount = 0;
+        animationPlaying = false;
     }
 }
