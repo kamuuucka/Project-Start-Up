@@ -1759,6 +1759,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1213954860, guid: b4c70e5f78bc4e3468a46d6e9d6e12ce, type: 3}
+      propertyPath: turnSmoothTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1234991005531772891, guid: b4c70e5f78bc4e3468a46d6e9d6e12ce,
         type: 3}
       propertyPath: m_Name
@@ -1777,7 +1781,7 @@ PrefabInstance:
     - target: {fileID: 1902842766677134689, guid: b4c70e5f78bc4e3468a46d6e9d6e12ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 1902842766677134689, guid: b4c70e5f78bc4e3468a46d6e9d6e12ce,
         type: 3}
