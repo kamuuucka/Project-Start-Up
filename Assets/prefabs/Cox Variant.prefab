@@ -82,16 +82,46 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1666222666109545550, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e7c315f2788968443943e351077ce1ca, type: 2}
+    - target: {fileID: -1442552742255596080, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdf5b7565a9462f4894e8acdd78c84fd, type: 2}
     - target: {fileID: 919132149155446097, guid: 4218323c4bf0b0c4088da5e5599d1393,
         type: 3}
       propertyPath: m_Name
-      value: Cox
+      value: Cox Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4218323c4bf0b0c4088da5e5599d1393,
         type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1977263825542955176, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d3461dfbdae17743b5b1d93bdd60c8d, type: 2}
+    - target: {fileID: 7581636509244939141, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28c9040f387f2d149bde54366b5aa40c, type: 2}
+    - target: {fileID: 7935570122207219977, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 28c9040f387f2d149bde54366b5aa40c, type: 2}
+    - target: {fileID: 8719554277038335773, guid: 4218323c4bf0b0c4088da5e5599d1393,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 488db304ec5c08e419b7919f308c310b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4218323c4bf0b0c4088da5e5599d1393, type: 3}
 --- !u!1 &1234991005531772891 stripped
@@ -182,3 +212,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1213954864}
   speed: 6
+  turnSmoothTime: 0.1
