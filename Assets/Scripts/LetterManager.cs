@@ -17,6 +17,8 @@ public class LetterManager : MonoBehaviour
     private int amount = 0;
     private int answerNumber = 0;
     private string wordToCheck = "";
+    private bool levelDone = false;
+    private bool animationPlaying = false;
 
     void Awake()
     {
@@ -37,10 +39,16 @@ public class LetterManager : MonoBehaviour
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
+                answerNumber++;
+                levelDone = true;
+                if (!animationPlaying)
+                {
+                    wordToCheck = "";
+                    levelData.SetLevelChange(true);
+                    amount = 0;
+                }
                 
-                wordToCheck = "";
-                levelData.SetLevelChange(true);
-                amount = 0;
+                //levelDone = false;
             }
         }
         else
@@ -48,6 +56,7 @@ public class LetterManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 LevelReload();
+                //levelDone = false;
             }
         }
 
@@ -74,5 +83,25 @@ public class LetterManager : MonoBehaviour
         levelData.SetLevelReload(true);
         amount = 0;
         wordToCheck = "";
+    }
+
+    public int GetAnswerNumber()
+    {
+        return answerNumber;
+    }
+
+    public bool GetLevelDone()
+    {
+        return levelDone;
+    }
+
+    public void SetLevelDone(bool value)
+    {
+        levelDone = value;
+    }
+
+    public void SetAnimationPlaying(bool value)
+    {
+        animationPlaying = value;
     }
 }

@@ -6,9 +6,10 @@ public class AnimationController : MonoBehaviour
     private MeshRenderer Mesh;
     private Animation anim;
     private Animator animator;
-    int number = 0;
+    //int number = 0;
     [ReadOnly]
     public string AnimationName;
+    public Animation animation;
 
     void Start()
     {
@@ -17,8 +18,17 @@ public class AnimationController : MonoBehaviour
         Mesh = gameObject.GetComponent<MeshRenderer>();
 
         AnimationName = anim.clip.name;
+        animation = anim;
              
         Mesh.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (anim.isPlaying)
+        {
+            Debug.Log("AAAAAA");
+        }
     }
 
     public void LoadAnimations(string name)
