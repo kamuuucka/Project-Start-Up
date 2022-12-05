@@ -17,8 +17,8 @@ MonoBehaviour:
     cellSize: {x: 64, y: 16}
     cells:
     - row:
-      - A
-      - V
+      - 
+      - K
       - 
       - 
       - 
@@ -26,50 +26,52 @@ MonoBehaviour:
       - 
     - row:
       - 
-      - R
+      - A
+      - N
+      - D
+      - A
+      - 
+      - 
+    - row:
+      - 
+      - M
+      - 
+      - J
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - A
+      - 
+      - U
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - 
+      - 
+      - L
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - I
+      - D
+      - I
+      - O
       - T
       - 
-      - 
-      - 
-      - 
     - row:
       - 
       - 
       - 
+      - E
       - 
       - 
       - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  correctAnswer: THEN
+  correctAnswer: KAMA
+  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
+    type: 3}
