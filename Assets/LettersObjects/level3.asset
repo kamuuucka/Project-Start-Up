@@ -17,61 +17,61 @@ MonoBehaviour:
     cellSize: {x: 64, y: 16}
     cells:
     - row:
-      - W
-      - N
-      - G
-      - I
-      - A
-      - S
-      - B
-    - row:
-      - D
-      - M
+      - 
       - T
-      - A
-      - G
-      - R
-      - D
+      - 
+      - 
+      - 
+      - 
+      - 
     - row:
-      - N
-      - J
-      - R
-      - M
-      - C
-      - O
-      - Q
-    - row:
-      - V
-      - K
-      - M
-      - G
-      - D
-      - L
-      - J
-    - row:
-      - A
-      - C
-      - Y
-      - N
+      - 
       - W
-      - Q
-      - A
-    - row:
-      - D
-      - U
-      - O
+      - H
       - E
-      - B
-      - D
-      - O
+      - R
+      - E
+      - 
     - row:
-      - A
-      - N
+      - 
       - S
-      - W
+      - 
       - E
+      - 
+      - 
       - R
-      - X
-  correctAnswer: DUO
+    - row:
+      - 
+      - P
+      - O
+      - O
+      - R
+      - I
+      - 
+    - row:
+      - 
+      - A
+      - 
+      - 
+      - E
+      - E
+      - 
+    - row:
+      - 
+      - C
+      - 
+      - H
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - E
+      - T
+      - 
+      - 
+      - 
+      - 
+  correctAnswer: THEIR
   letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
     type: 3}

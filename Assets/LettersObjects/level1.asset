@@ -18,60 +18,60 @@ MonoBehaviour:
     cells:
     - row:
       - 
-      - K
+      - 
       - 
       - 
       - 
       - 
       - 
     - row:
-      - 
+      - B
+      - O
       - A
-      - N
-      - D
-      - A
-      - 
-      - 
-    - row:
-      - 
-      - M
-      - 
-      - J
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - A
-      - 
-      - U
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
+      - R
       - 
       - L
       - 
-      - 
-      - 
     - row:
       - 
-      - I
-      - D
-      - I
+      - 
+      - 
+      - 
+      - P
       - O
-      - T
       - 
     - row:
+      - L
+      - 
+      - 
+      - L
+      - O
+      - A
+      - D
+    - row:
+      - O
       - 
       - 
       - 
+      - O
+      - F
+      - 
+    - row:
+      - V
+      - 
+      - O
+      - 
+      - R
+      - 
+      - 
+    - row:
       - E
       - 
+      - R
       - 
       - 
-  correctAnswer: KAMA
+      - 
+      - 
+  correctAnswer: LOAF
   letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
     type: 3}
