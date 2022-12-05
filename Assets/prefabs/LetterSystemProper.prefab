@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &9016865767930885634
+--- !u!1001 &4536778013544310541
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -65,12 +65,17 @@ PrefabInstance:
     - target: {fileID: 1197749188553911162, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: m_Name
-      value: NewLetterSystem
+      value: LettersSystem
       objectReference: {fileID: 0}
     - target: {fileID: 1197749188553911162, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4034033257119844329, guid: ceace7a4100cd204e918831412f36f6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4398478406473619896, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
@@ -839,21 +844,50 @@ PrefabInstance:
         type: 3}
       propertyPath: manager
       value: 
-      objectReference: {fileID: 1471327090304833077}
+      objectReference: {fileID: 1471327090304833077, guid: c6dd867897fa0c048b7daabdae4520b8,
+        type: 3}
     - target: {fileID: 8345723305558104415, guid: ceace7a4100cd204e918831412f36f6d,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 3099267375884537712, guid: ceace7a4100cd204e918831412f36f6d, type: 3}
     - {fileID: 8345723305558104415, guid: ceace7a4100cd204e918831412f36f6d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ceace7a4100cd204e918831412f36f6d, type: 3}
---- !u!114 &1471327090304833077 stripped
+--- !u!1 &3344658414777715831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1197749188553911162, guid: ceace7a4100cd204e918831412f36f6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4536778013544310541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1165546845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3344658414777715831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b025c83f0fa3a754c9dec20b6ddf4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anims:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  manager: {fileID: 6322134702438041402}
+--- !u!114 &6322134702438041402 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7586704539066114103, guid: ceace7a4100cd204e918831412f36f6d,
     type: 3}
-  m_PrefabInstance: {fileID: 9016865767930885634}
+  m_PrefabInstance: {fileID: 4536778013544310541}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
