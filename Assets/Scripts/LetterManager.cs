@@ -28,7 +28,7 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+       //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
         if (levelData.GetLastLevel())
         {
             timer.SetBool(true);
