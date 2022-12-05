@@ -1,13 +1,9 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LetterManager : MonoBehaviour
 {
-
-    [SerializeField] private Timer timer;
-
     public GameObject[] letterPlacement = new GameObject[9];
     public List<string> correctAnswers = new List<string>();
 
@@ -18,36 +14,42 @@ public class LetterManager : MonoBehaviour
     private int answerNumber = 0;
     private string wordToCheck = "";
 
+    //new
+    public GameObject Correct;
+    public GameObject Wrong;
+
     void Awake()
     {
-        timer.SetBool(false);
-        levelData = GetComponent<LettersAreaData>();
+        levelData = GetComponent<LettersAreaData>();         
     }
 
     private void Update()
     {
-
         if (wordToCheck.Equals(correctAnswers[answerNumber]))
         {
+            
+
             if (Input.GetKeyUp(KeyCode.Return))
             {
-                if (answerNumber == 4)
+                if(answerNumber == 4)
                 {
-                    timer.SetBool(true);
-                    Debug.Log(timer.GetTime());
-
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene(0);
                 }
                 wordToCheck = "";
                 levelData.SetLevelChange(true);
                 amount = 0;
                 answerNumber++;
+                //new
+                Correct.SetActive(true);
+                Correct.SetActive(false);
             }
         }
         else
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
+                Wrong.SetActive(true);
+                Wrong.SetActive(false);
                 LevelReload();
             }
         }
@@ -72,6 +74,7 @@ public class LetterManager : MonoBehaviour
 
     public void LevelReload()
     {
+        Correct.SetActive(false);
         levelData.SetLevelReload(true);
         amount = 0;
         wordToCheck = "";
