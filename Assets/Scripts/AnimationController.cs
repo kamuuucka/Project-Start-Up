@@ -27,6 +27,7 @@ public class AnimationController : MonoBehaviour
         {
             Mesh.enabled = true;
             animator.SetBool(name, true);
+            
         }
     }
  }
