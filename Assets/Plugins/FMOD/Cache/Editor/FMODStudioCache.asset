@@ -77,7 +77,11 @@ MonoBehaviour:
   - {fileID: 1715025625173548717}
   StringsBanks:
   - {fileID: 6955345859762382948}
+<<<<<<< HEAD
   cacheTime: 638055866611209970
+=======
+  cacheTime: 638055860810277843
+>>>>>>> Lighting
   cacheVersion: 131591
 --- !u!114 &1715025625173548717
 MonoBehaviour:
@@ -94,7 +98,11 @@ MonoBehaviour:
   Path: FMOD/AudioManagement/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 638055866611209970
+=======
+  lastModified: 638055860810277843
+>>>>>>> Lighting
   FileSizes:
   - Name: Desktop
     Value: 3075488
@@ -114,7 +122,11 @@ MonoBehaviour:
   Path: FMOD/AudioManagement/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 638055866611020475
+=======
+  lastModified: 638055860809820286
+>>>>>>> Lighting
   FileSizes:
   - Name: Desktop
     Value: 804
