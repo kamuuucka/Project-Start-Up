@@ -18,12 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WelcomeScreen.unity
     guid: 034910b5b128e2446a1646889252b158
   - enabled: 1
-    path: Assets/Scenes/Kama.unity
-    guid: a86d459ea40244a4d85a9503bc7f2331
+    path: Assets/Scenes/MainScene.unity
+    guid: ae743a415789e0944bd81a6a9423c9cd
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: 8f9d75423bf793642b6361940ce264c6
-  - enabled: 0
-    path: Assets/Scenes/Kama.unity
-    guid: a86d459ea40244a4d85a9503bc7f2331
   m_configObjects: {}
