@@ -161,7 +161,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
+  antialiasing: 3
   SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
@@ -353,8 +353,13 @@ PrefabInstance:
     - target: {fileID: 6445858453091866002, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453091866002, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8fd23435bedfc334d8dbe97a6f93b78c, type: 2}
     - target: {fileID: 6445858453226289625, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -363,8 +368,13 @@ PrefabInstance:
     - target: {fileID: 6445858453226289630, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453226289630, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 82c9b2550a99111408d4046eeb74e09b, type: 2}
     - target: {fileID: 6445858453368044839, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -373,8 +383,13 @@ PrefabInstance:
     - target: {fileID: 6445858453368044844, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453368044844, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7cf08242b67e7dd4ba4bc520918502ed, type: 2}
     - target: {fileID: 6445858453393346341, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -383,8 +398,13 @@ PrefabInstance:
     - target: {fileID: 6445858453393346344, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453393346344, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 27c84ee5eabedfe4c94e8b5a80508f05, type: 2}
     - target: {fileID: 6445858453548240077, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -393,8 +413,13 @@ PrefabInstance:
     - target: {fileID: 6445858453548240082, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453548240082, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d9dc89a393150a048857e542ec3b05a8, type: 2}
     - target: {fileID: 6445858453711444005, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -403,8 +428,13 @@ PrefabInstance:
     - target: {fileID: 6445858453711444008, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453711444008, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0c6f3a030ccac342b7535f9898b00dc, type: 2}
     - target: {fileID: 6445858453788539431, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -413,8 +443,13 @@ PrefabInstance:
     - target: {fileID: 6445858453788539436, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858453788539436, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: deaf9f0c42c7d394aa2c610166ec64be, type: 2}
     - target: {fileID: 6445858454290964063, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -423,8 +458,13 @@ PrefabInstance:
     - target: {fileID: 6445858454290964068, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858454290964068, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92b8cb4d264a69440a5b42d103b61d93, type: 2}
     - target: {fileID: 6445858454528185144, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
@@ -433,8 +473,13 @@ PrefabInstance:
     - target: {fileID: 6445858454528185149, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6445858454528185149, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b8b18b0afc65af4f81620bba92243c1, type: 2}
     - target: {fileID: 6445858455055269873, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Name
@@ -4498,7 +4543,7 @@ Light:
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
@@ -4595,9 +4640,9 @@ MonoBehaviour:
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
     m_Override: 512
-    m_UseOverride: 1
-    m_Level: 0
-  m_ShadowDimmer: 1
+    m_UseOverride: 0
+    m_Level: 3
+  m_ShadowDimmer: 0.5
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
