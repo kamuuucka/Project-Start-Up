@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6867.4136, g: 7118.5938, b: 7666.349, a: 1}
+  m_IndirectSpecularColor: {r: 6883.77, g: 7135.226, b: 7684.8384, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6367,6 +6367,23 @@ PrefabInstance:
       propertyPath: spaceLettersColumns
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3159433783676324507, guid: f710667ec640c584ea3943f6798f36ab,
+        type: 3}
+      propertyPath: questions.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159433783676324507, guid: f710667ec640c584ea3943f6798f36ab,
+        type: 3}
+      propertyPath: questions.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: b55c50dc7569a2e408a2c753d3c13969,
+        type: 2}
+    - target: {fileID: 3159433783676324507, guid: f710667ec640c584ea3943f6798f36ab,
+        type: 3}
+      propertyPath: questions.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6345eb1fb3cb71e49bcbc8ea2a8f42d2,
+        type: 2}
     - target: {fileID: 4796883204954971552, guid: f710667ec640c584ea3943f6798f36ab,
         type: 3}
       propertyPath: anims.Array.data[0]
