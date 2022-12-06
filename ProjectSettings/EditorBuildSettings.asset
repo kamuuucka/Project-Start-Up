@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelection.unity
     guid: fcfaa5064ec9c9848beb869fd6c57208
   - enabled: 1
+    path: Assets/Scenes/WelcomeScreen.unity
+    guid: 034910b5b128e2446a1646889252b158
+  - enabled: 1
     path: Assets/Scenes/Kama.unity
     guid: a86d459ea40244a4d85a9503bc7f2331
   - enabled: 1

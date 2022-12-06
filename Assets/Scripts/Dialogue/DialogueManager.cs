@@ -1,30 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Queue<string> sentences;
+    public TMP_Text title;
+    public TMP_Text dialogueText;
 
+    private Queue<string> sentences;
 
     void Start()
     {
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialoge)
+    public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("starting dialoge with " + dialoge.name);
+        title.text = dialogue.name;
 
-
-        foreach (string sentence in dialoge.sentences)
+        if (sentences != null)
         {
-            sentences.Enqueue(sentence);
+            sentences.Clear();
+
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
+
+            DisplayNextSentence();
         }
-
-        DisplayNextSentence();
-
     }
 
     public void DisplayNextSentence()
@@ -36,11 +44,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+        dialogueText.text = sentence;
     }
 
     void EndDialogue()
     {
-        Debug.Log("end");
+        Debug.Log("end dialogue");
     }
 }

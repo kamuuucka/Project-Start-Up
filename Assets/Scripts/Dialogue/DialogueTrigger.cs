@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
+    public GameObject dialogueBox;
+    public GameObject dialogueButton;
+
     public Dialogue dialogue;
 
     private void Awake()
     {
-        TriggerDialogue();
+        dialogueBox.SetActive(false);
+
     }
 
     public void TriggerDialogue()
     {
+        dialogueBox.SetActive(true);
+        dialogueButton.SetActive(false);
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 }
