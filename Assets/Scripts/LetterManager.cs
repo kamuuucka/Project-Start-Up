@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LetterManager : MonoBehaviour
-{
-
+{ 
     [SerializeField] private Timer timer;
 
     public GameObject[] letterPlacement = new GameObject[9];
@@ -19,6 +18,10 @@ public class LetterManager : MonoBehaviour
     private string wordToCheck = "";
     private bool levelDone = false;
     private bool animationPlaying = false;
+
+    //new
+    public GameObject Correct;
+    public GameObject Wrong;
 
     void Awake()
     {
@@ -44,6 +47,9 @@ public class LetterManager : MonoBehaviour
                 animationPlaying = true;
                 Debug.Log(animationPlaying);
                 Invoke("LoadNextLevel", 2f);
+                //New
+                Correct.SetActive(true);
+                Correct.SetActive(false);
             }
         }
         else
@@ -52,6 +58,9 @@ public class LetterManager : MonoBehaviour
             {
                 LevelReload();
                 //levelDone = false;
+                //New
+                Wrong.SetActive(true);
+                Wrong.SetActive(false);
             }
         }
 
