@@ -8,7 +8,6 @@ public class LetterManager : MonoBehaviour
     [SerializeField] private Timer timer;
 
     public GameObject[] letterPlacement = new GameObject[9];
-    public List<string> correctAnswers = new List<string>();
 
     private List<GameObject> word = new List<GameObject>();
     private LettersAreaData levelData;
@@ -31,11 +30,11 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-       //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+        //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
         if (levelData.GetLastLevel())
         {
             timer.SetBool(true);
-            Debug.Log(timer.GetTime());
+            //Debug.Log(timer.GetTime());
             SceneManager.LoadScene(3);
         }
         else if (levelData.CorrectWord(wordToCheck))
@@ -45,7 +44,7 @@ public class LetterManager : MonoBehaviour
                 answerNumber++;
                 levelDone = true;
                 animationPlaying = true;
-                Debug.Log(animationPlaying);
+                //Debug.Log(animationPlaying);
                 Invoke("LoadNextLevel", 2f);
                 //New
                 Correct.SetActive(true);
