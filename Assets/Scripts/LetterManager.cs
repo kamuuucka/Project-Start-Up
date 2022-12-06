@@ -35,7 +35,7 @@ public class LetterManager : MonoBehaviour
         {
             timer.SetBool(true);
             //Debug.Log(timer.GetTime());
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
         else if (levelData.CorrectWord(wordToCheck))
         {
