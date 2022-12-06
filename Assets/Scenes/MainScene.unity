@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 6883.77, g: 7135.226, b: 7684.8384, a: 1}
+  m_IndirectSpecularColor: {r: 6867.4136, g: 7118.5938, b: 7666.349, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -348,97 +348,102 @@ PrefabInstance:
     - target: {fileID: 6445858453091865999, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453091866002, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453226289625, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453226289630, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453368044839, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453368044844, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453393346341, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453393346344, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453548240077, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453548240082, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453711444005, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453711444008, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453788539431, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858453788539436, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858454290964063, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858454290964068, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858454528185144, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858454528185149, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6445858455055269873, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
       propertyPath: m_Name
       value: HouseWorking
+      objectReference: {fileID: 0}
+    - target: {fileID: 6445858455055269873, guid: 1db0db485d585d84ba591b2a55990384,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6445858455055269874, guid: 1db0db485d585d84ba591b2a55990384,
         type: 3}
