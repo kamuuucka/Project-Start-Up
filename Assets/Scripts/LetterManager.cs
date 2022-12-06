@@ -24,7 +24,7 @@ public class LetterManager : MonoBehaviour
 
     void Awake()
     {
-        timer.SetBool(false);
+        //timer.SetBool(false);
         levelData = GetComponent<LettersAreaData>();
     }
 

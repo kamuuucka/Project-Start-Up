@@ -23,7 +23,7 @@ public class LettersAreaData : MonoBehaviour
 
     private void Start()
     {
-        questions[levelNumber].GenerateLevel(this);
+        //questions[levelNumber].GenerateLevel(this);
     }
     private void Update()
     {
