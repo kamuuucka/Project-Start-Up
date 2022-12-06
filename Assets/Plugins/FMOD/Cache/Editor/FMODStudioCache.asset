@@ -184,8 +184,13 @@ MonoBehaviour:
   MasterBanks:
   - {fileID: -5491317155320080369}
   StringsBanks:
+<<<<<<< HEAD
   - {fileID: -1999052028984098011}
   cacheTime: 638059294275085178
+=======
+  - {fileID: 6955345859762382948}
+  cacheTime: 638059215108486712
+>>>>>>> DialogAgain
   cacheVersion: 131591
 --- !u!114 &4541660355650370149
 MonoBehaviour:
@@ -200,6 +205,7 @@ MonoBehaviour:
   m_Name: event:/Music
   m_EditorClassIdentifier: 
   Path: FMOD/AudioManagement/Build/Desktop/Master.bank
+<<<<<<< HEAD
   Guid:
     Data1: 0
     Data2: 0
@@ -213,6 +219,15 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+=======
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638059215108486712
+  FileSizes:
+  - Name: Desktop
+    Value: 3075488
+  Exists: 1
+>>>>>>> DialogAgain
 --- !u!114 &6955345859762382948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +242,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   Min: 0
   Max: 0
   Default: 0
@@ -236,4 +252,10 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 0
   Labels: []
+=======
+  lastModified: 638059215108306873
+  FileSizes:
+  - Name: Desktop
+    Value: 804
+>>>>>>> DialogAgain
   Exists: 1
