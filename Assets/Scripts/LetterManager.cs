@@ -17,6 +17,8 @@ public class LetterManager : MonoBehaviour
     private int amount = 0;
     private int answerNumber = 0;
     private string wordToCheck = "";
+    private bool levelDone = false;
+    private bool animationPlaying = false;
 
     void Awake()
     {
@@ -26,22 +28,22 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-
-        if (wordToCheck.Equals(correctAnswers[answerNumber]))
+       //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+        if (levelData.GetLastLevel())
+        {
+            timer.SetBool(true);
+            Debug.Log(timer.GetTime());
+            SceneManager.LoadScene(3);
+        }
+        else if (levelData.CorrectWord(wordToCheck))
         {
             if (Input.GetKeyUp(KeyCode.Return))
             {
-                if (answerNumber == 4)
-                {
-                    timer.SetBool(true);
-                    Debug.Log(timer.GetTime());
-
-                    SceneManager.LoadScene(3);
-                }
-                wordToCheck = "";
-                levelData.SetLevelChange(true);
-                amount = 0;
                 answerNumber++;
+                levelDone = true;
+                animationPlaying = true;
+                Debug.Log(animationPlaying);
+                Invoke("LoadNextLevel", 2f);
             }
         }
         else
@@ -49,6 +51,7 @@ public class LetterManager : MonoBehaviour
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 LevelReload();
+                //levelDone = false;
             }
         }
 
@@ -75,5 +78,35 @@ public class LetterManager : MonoBehaviour
         levelData.SetLevelReload(true);
         amount = 0;
         wordToCheck = "";
+    }
+
+    public int GetAnswerNumber()
+    {
+        return answerNumber;
+    }
+
+    public bool GetLevelDone()
+    {
+        return levelDone;
+    }
+
+    public void SetLevelDone(bool value)
+    {
+        levelDone = value;
+    }
+
+    public void SetAnimationPlaying(bool value)
+    {
+        animationPlaying = value;
+        Debug.Log(animationPlaying);
+    }
+
+    private void LoadNextLevel()
+    {
+        Debug.Log(animationPlaying);
+        wordToCheck = "";
+        levelData.SetLevelChange(true);
+        amount = 0;
+        animationPlaying = false;
     }
 }

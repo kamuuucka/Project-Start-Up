@@ -17,11 +17,19 @@ MonoBehaviour:
     cellSize: {x: 64, y: 16}
     cells:
     - row:
+      - O
+      - 
+      - 
+      - T
+      - T
+      - 
+      - 
+    - row:
+      - O
       - 
       - 
       - 
-      - 
-      - 
+      - H
       - 
       - 
     - row:
@@ -29,6 +37,30 @@ MonoBehaviour:
       - 
       - 
       - 
+      - E
+      - A
+      - 
+    - row:
+      - T
+      - 
+      - C
+      - A
+      - N
+      - 
+      - T
+    - row:
+      - 
+      - H
+      - 
+      - M
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - 
+      - A
+      - E
       - 
       - 
       - 
@@ -36,40 +68,10 @@ MonoBehaviour:
       - 
       - 
       - 
+      - N
       - 
       - 
       - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  correctAnswer: 
+  correctAnswer: THAN
+  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
+    type: 3}

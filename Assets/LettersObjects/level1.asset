@@ -17,59 +17,61 @@ MonoBehaviour:
     cellSize: {x: 64, y: 16}
     cells:
     - row:
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+    - row:
+      - B
+      - O
       - A
+      - R
+      - 
+      - L
+      - 
+    - row:
+      - 
+      - 
+      - 
+      - 
+      - P
+      - O
+      - 
+    - row:
+      - L
+      - 
+      - 
+      - L
+      - O
+      - A
+      - D
+    - row:
+      - O
+      - 
+      - 
+      - 
+      - O
+      - F
+      - 
+    - row:
       - V
       - 
-      - 
-      - 
-      - 
-      - 
-    - row:
+      - O
       - 
       - R
-      - T
-      - 
-      - 
       - 
       - 
     - row:
+      - E
+      - 
+      - R
       - 
       - 
       - 
       - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-    - row:
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-      - 
-  correctAnswer: THEN
+  correctAnswer: LOAF
+  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
+    type: 3}

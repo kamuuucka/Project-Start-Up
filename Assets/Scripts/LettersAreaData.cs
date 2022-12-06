@@ -6,19 +6,7 @@ using Array2DEditor;
 
 public class LettersAreaData : MonoBehaviour
 {
-    public GameObject letterPrefab;
-
-    //Arays of letters (visible in the inspector)
-    public Array2DString testArray;
-    public Array2DString letterArray;
-    public Array2DString letterArray2;
-    public Array2DString letterArray3;
-    public Array2DString letterArray4;
-    public Array2DString letterArray5;
-
-    //public LetterFieldSO question1;
-
-    //SO alphabet that contains all the letters
+    public List<LetterFieldSO> questions = new List<LetterFieldSO>();
 
     //Starting position for the letters
     public int letterX = -7;
@@ -28,103 +16,54 @@ public class LettersAreaData : MonoBehaviour
     public int spaceLettersRows = 2;
     public int spaceLettersColumns = 2;
 
-    private List<Array2DString> listOfLevels = new();
-    private float letterXChange;
-    private float letterZChange;
-    private char randomLetter;
     private int levelNumber = 0;
     private bool changeLevel = false;
     private bool reloadLevel = false;
-
-    //The rows and columns have to be the same as the arrayLevel arrays [rows, columns]
-    private readonly int rows = 7;
-    private readonly int columns = 7;
-    private readonly System.Random rnd = new System.Random();
+    private bool lastLevel = false;
 
     private void Start()
     {
-        letterXChange = letterX;
-        letterZChange = letterZ;
-        AddToList(letterArray, letterArray2, letterArray3, letterArray4, letterArray5);
-        LoadLetters(listOfLevels[levelNumber]);
+        questions[levelNumber].GenerateLevel(this);
     }
     private void Update()
     {
-        //Debug.Log(changeLevel);
         //By pressing Enter, you reset the board - to be changed later
         if (changeLevel || Input.GetKeyUp(KeyCode.R))
         {
             KillTheYounglings();
-            //Debug.Log(levelNumber);
             levelNumber++;
-            if (levelNumber > 4)
+            Debug.Log(levelNumber + "  LIST SIZE: " + questions.Count);
+            if (levelNumber == questions.Count)
             {
-                levelNumber = 4;
+                Debug.Log("No more level for you");
+                lastLevel = true;
+                SetLevelChange(false);
             }
-            LoadLetters(listOfLevels[levelNumber]);
-            SetLevelChange(false);
-            Debug.Log(changeLevel);
+            else
+            {
+                questions[levelNumber].GenerateLevel(this);
+                SetLevelChange(false);
+            }
         } else if (reloadLevel)
         {
             KillTheYounglings();
-            LoadLetters(listOfLevels[levelNumber]);
+            questions[levelNumber].GenerateLevel(this);
             SetLevelReload(false);
         }
     }
 
-    /// <summary>
-    /// Code responsible for loading letter objects with desired names (as written in the inspector)
-    /// </summary>
-    /// <param name="array"></param>
-    private void LoadLetters(Array2DString array)
+    public bool CorrectWord(string word)
     {
-        letterXChange = letterX;
-        letterZChange = letterZ;
-
-        for (int i = 0; i < rows; i++)
+        if (word.Equals(questions[levelNumber].correctAnswer))
         {
-            letterXChange = letterX;
-            ////Because we are using float, the 0 is hard to reach so we are helping the loops :)
-            //if (i == 0)
-            //{
-            //    //z = 0
-            //    letterZChange = 0.0f;
-            //}
-            //if (i >= 1 && i <= 3)
-            //{
-            //    //z is smaller than 0
-            //}
-            //if(i>=4 && i<= 6)
-            //{
-            //    //z is bigger than 0
-            //}
-            
-            for (int j = 0; j < columns; j++)
-            {
-                //Because we are using float, the 0 is hard to reach so we are helping the loops :)
-              
-                
-                //Load random letters if see those values
-                if (array.GetCell(j,i).Equals("0") || array.GetCell(j,i).Equals(""))
-                {
-                    //Debug.Log("Found the random letter");
-                    //Load random letter using ASCII code, it needs to be string later, because we have an array of strings
-                    randomLetter = (char)rnd.Next(65, 91);
-                    array.SetCell(j, i, randomLetter.ToString());
-                }
-
-                //Set the spawnpoint for the objects, set its name, create it and set the parent (usefull for deleting children later)
-                Vector3 spawnPoint = new Vector3(letterXChange, 0.55f, letterZChange);
-                letterPrefab.name = array.GetCell(j, i);
-                GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
-                letter.name = letter.name.Replace("(Clone)", "").Trim();
-                letter.transform.parent = this.transform;
-                
-                letterXChange += spaceLettersColumns;
-            }
-            letterZChange += spaceLettersRows;
-            letterXChange = letterX;
+            return true;
         }
+        else return false;
+    }
+
+    public bool GetLastLevel()
+    {
+        return lastLevel;
     }
 
     private void KillTheYounglings()
@@ -135,17 +74,9 @@ public class LettersAreaData : MonoBehaviour
         }
     }
 
-    void AddToList(params Array2DString[] list)
+    public bool GetLevelNumber()
     {
-        for (int i = 0; i < list.Length; i++)
-        {
-            listOfLevels.Add(list[i]);
-        }
-    }
-
-    public int GetLevelNumber()
-    {
-        return levelNumber;
+        return true;
     }
 
     public void SetLevelChange(bool levelStatus)
@@ -161,5 +92,25 @@ public class LettersAreaData : MonoBehaviour
     public void SetLevelReload(bool levelStatus)
     {
         reloadLevel = levelStatus;
+    }
+
+    public int GetStartX()
+    {
+        return letterX;
+    }
+
+    public int GetStartZ()
+    {
+        return letterZ;
+    }
+
+    public int GetSpaceBetweenColumns()
+    {
+        return spaceLettersColumns;
+    }
+
+    public int GetSpaceBetweenRows()
+    {
+        return spaceLettersRows;
     }
 }
