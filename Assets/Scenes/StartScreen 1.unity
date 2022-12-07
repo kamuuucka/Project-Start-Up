@@ -2302,7 +2302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME NAME
+  m_text: Step-Up Fred
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d7218d630702534fbc04bde0a66f22c, type: 2}
   m_sharedMaterial: {fileID: -739917460391439351, guid: 7d7218d630702534fbc04bde0a66f22c,
@@ -2330,8 +2330,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 125
-  m_fontSizeBase: 125
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
