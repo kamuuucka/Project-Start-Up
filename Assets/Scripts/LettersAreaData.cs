@@ -74,9 +74,9 @@ public class LettersAreaData : MonoBehaviour
         }
     }
 
-    public bool GetLevelNumber()
+    public int GetLevelNumber()
     {
-        return true;
+        return levelNumber;
     }
 
     public void SetLevelChange(bool levelStatus)
@@ -112,5 +112,10 @@ public class LettersAreaData : MonoBehaviour
     public int GetSpaceBetweenRows()
     {
         return spaceLettersRows;
+    }
+
+    public string GetCorrectAnswer()
+    {
+        return questions[levelNumber].correctAnswer;
     }
 }
