@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    //New
+    public GameObject HoverObject;
     public void PlayGame()
     {
+        HoverObject.SetActive(true);
+        HoverObject.SetActive(false);;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -23,6 +27,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        HoverObject.SetActive(true);
         PlayerPrefs.DeleteKey("timer");
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
