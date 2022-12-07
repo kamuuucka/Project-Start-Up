@@ -21,6 +21,7 @@ public class LetterManager : MonoBehaviour
     //new
     public GameObject Correct;
     public GameObject Wrong;
+    public GameObject PickUp;
 
     void Awake()
     {
@@ -72,8 +73,10 @@ public class LetterManager : MonoBehaviour
 
     public void AddToList(GameObject obj)
     {
+        PickUp.SetActive(true);
+        PickUp.SetActive(false);
         word.Add(obj);
-        wordToCheck += obj.name;
+        wordToCheck += obj.name; 
     }
 
     public int GetAmount()

@@ -14,6 +14,9 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
 
+    //new
+    public GameObject AudioObject;
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -45,11 +48,18 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
+        //new
+        AudioObject.SetActive(true);
+        AudioObject.SetActive(false);
         dialogueText.text = sentence;
     }
 
     void EndDialogue()
     {
+        //new
+        AudioObject.SetActive(true);
+        AudioObject.SetActive(false);
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
