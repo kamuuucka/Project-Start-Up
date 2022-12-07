@@ -1,12 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Array2DEditor;
 
+/// <summary>
+/// Scriptable object for creating the levels (easier for designers)
+/// </summary>
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/LetterField", order = 1)]
 public class LetterFieldSO : ScriptableObject
 {
-    public Array2DString letters; // MAYBE: you can even create a SO creator: just type in the right answer, and it creates a letter field containing it???
+    public Array2DString letters;
 
     public string correctAnswer;
     public GameObject letterPrefab;
@@ -14,26 +15,29 @@ public class LetterFieldSO : ScriptableObject
     private int letterZChange = 0;
     private char randomLetter;
 
-    private readonly System.Random rnd = new System.Random();
+    private readonly System.Random rnd = new();
 
+    /// <summary>
+    /// Generating level with already set and randomised letter
+    /// </summary>
+    /// <param name="areaData"></param>
     public void GenerateLevel(LettersAreaData areaData)
     {
-        letterXChange = areaData.GetStartX();
         letterZChange = areaData.GetStartZ();
 
         for (int i = 0; i < letters.GridSize.y; i++)
         {
+            letterXChange = areaData.GetStartX();
             for (int j = 0; j < letters.GridSize.x; j++)
             {
                 if (letters.GetCell(j, i).Equals("0") || letters.GetCell(j, i).Equals(""))
                 {
-                    //Debug.Log("Found the random letter");
-                    //Load random letter using ASCII code, it needs to be string later, because we have an array of strings
+                    //Load random letter using ASCII code (char)
                     randomLetter = (char)rnd.Next(65, 91);
+                    //Make the letter a string, because the name of an object is a string
                     letters.SetCell(j, i, randomLetter.ToString());
                 }
 
-                //Set the spawnpoint for the objects, set its name, create it and set the parent (usefull for deleting children later)
                 Vector3 spawnPoint = new Vector3(letterXChange, 0.55f, letterZChange);
                 letterPrefab.name = letters.GetCell(j, i);
                 GameObject letter = Instantiate(letterPrefab, spawnPoint, Quaternion.identity);
@@ -43,7 +47,7 @@ public class LetterFieldSO : ScriptableObject
                 letterXChange += areaData.GetSpaceBetweenColumns();
             }
             letterZChange -= areaData.GetSpaceBetweenRows();
-            letterXChange = areaData.GetStartX();
+            
         }
     }
 }

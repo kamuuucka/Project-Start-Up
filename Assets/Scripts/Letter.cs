@@ -1,94 +1,91 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
+/// <summary>
+/// Script responsible for the Letter behaviours
+/// </summary>
 public class Letter : MonoBehaviour
 {
     public Material[] materials;
 
-    private Renderer renderers;
+    private Renderer letterRenderer;
     private GameObject letterWithSprite;
     private LetterManager letterManager;
 
     private void Start()
     {
         letterManager = GetComponentInParent<LetterManager>();
-        //getting the materials
         GetAllProducts();
+
         if (letterWithSprite != null)
         {
             letterWithSprite.SetActive(true);
-            renderers = letterWithSprite.GetComponent<Renderer>();
+            letterRenderer = letterWithSprite.GetComponent<Renderer>();
 
-            renderers.enabled = true;
-            renderers.sharedMaterial = materials[0];
+            letterRenderer.enabled = true;
+            letterRenderer.sharedMaterial = materials[0];
         }
     }
 
+    /// <summary>
+    /// Changing colour of the material when player touches it
+    /// </summary>
+    /// <param name="collider"></param>
     private void OnTriggerStay(Collider collider)
     {
-        //when touching the player
         if (collider.gameObject.CompareTag("Player"))
         {
             Selecting();
-
-            //setting the material to the new one
-            if (renderers != null)
-            {
-                renderers.sharedMaterial = materials[1];
-            }
+            if (letterRenderer != null) letterRenderer.sharedMaterial = materials[1];
         }
     }
 
+    /// <summary>
+    /// Changing colour of the material when player stops touching it
+    /// </summary>
+    /// <param name="collider"></param>
     private void OnTriggerExit(Collider collider)
     {
-        //if touched by player
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.CompareTag("Player"))
         {
-            if (renderers != null)
-            {
-                //resetting the material to the original one
-                renderers.sharedMaterial = materials[0];
-            }
+            if (letterRenderer != null) letterRenderer.sharedMaterial = materials[0];   
         }
     }
 
+    /// <summary>
+    /// Pick up letters when pressing space
+    /// </summary>
     private void Selecting()
     {
-        //when pressing space
-        if (Input.GetKey("space"))
+        if (Input.GetKey(KeyCode.Space))
         {
-            if (letterWithSprite != null)
-            {
-                PickUp();
-            }
+            if (letterWithSprite != null) PickUp();
         }
     }
 
+    /// <summary>
+    /// Getting the materials
+    /// </summary>
     public void GetAllProducts()
     {
-        foreach (Transform tr in this.GetComponentsInChildren<Transform>(true))
+        foreach (Transform tr in GetComponentsInChildren<Transform>(true))
         {
-            if (tr.name.Equals(this.name) && (tr != this.transform))
-            {
-                letterWithSprite = tr.gameObject;
-            }
+            if (tr.name.Equals(name) && (tr != transform)) letterWithSprite = tr.gameObject; 
         }
     }
 
+    /// <summary>
+    /// Picking up the letters and updating the shelf information
+    /// </summary>
     private void PickUp()
     {
-        if (letterManager.GetAmount() < 9)
+        if (letterManager.GetAmountOfLettersInWord() < 9)
         {
-            transform.position = letterManager.letterPlacement[letterManager.GetAmount()].transform.position;
-            letterManager.SetAmount();
-            letterManager.AddToList(this.gameObject);
+            transform.position = letterManager.letterPlacement[letterManager.GetAmountOfLettersInWord()].transform.position;
+            letterManager.AddToList(gameObject.name);
         }
         else
         {
-            Debug.Log("There is no more space on the shelf!");
+            //If player wants to collect more than 9 letters, reset the board
             letterManager.LevelReload();
         }
     }

@@ -1,26 +1,24 @@
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manager for the whole letters. Checking the correct word, reloading the level and checking the timer
+/// </summary>
 public class LetterManager : MonoBehaviour
-{ 
-    [SerializeField] private Timer timer;
-
+{
     public GameObject[] letterPlacement = new GameObject[9];
+    [SerializeField]
+    private Timer timer;
 
-    private List<GameObject> word = new List<GameObject>();
+    public GameObject correctSound;
+    public GameObject wrongSound;
+
     private LettersAreaData levelData;
 
-    private int amount = 0;
+    private int amountOfLetterInWord = 0;
     private int answerNumber = 0;
     private string wordToCheck = "";
     private bool levelDone = false;
-    private bool animationPlaying = false;
-
-    //new
-    public GameObject Correct;
-    public GameObject Wrong;
 
     void Awake()
     {
@@ -30,91 +28,104 @@ public class LetterManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("LAST LEVEL: " + levelData.GetLastLevel());
+        //If it's the last level, go to the end scene
         if (levelData.GetLastLevel())
         {
             timer.SetBool(true);
-            //Debug.Log(timer.GetTime());
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        else if (levelData.CorrectWord(wordToCheck))
+
+        else if (Input.GetKeyUp(KeyCode.Return))
         {
-            if (Input.GetKeyUp(KeyCode.Return))
+            //If the word is correct, go to the next level
+            if (levelData.CorrectWord(wordToCheck))
             {
                 answerNumber++;
                 levelDone = true;
-                animationPlaying = true;
-                //Debug.Log(animationPlaying);
-                Invoke("LoadNextLevel", 2f);
-                //New
-                Correct.SetActive(true);
-                Correct.SetActive(false);
+                //Wait until the animation is done, then load the next level
+                Invoke(nameof(LoadNextLevel), 1.5f);
+
+                //Play the correct sounds
+                correctSound.SetActive(true);
+                correctSound.SetActive(false);
+
             }
-        }
-        else
-        {
-            if (Input.GetKeyUp(KeyCode.Return))
+            //if the word is not correct, reload the scene
+            else
             {
                 LevelReload();
-                //levelDone = false;
-                //New
-                Wrong.SetActive(true);
-                Wrong.SetActive(false);
+
+                //Play the correct sounds
+                wrongSound.SetActive(true);
+                wrongSound.SetActive(false);
+
             }
         }
-
     }
 
-    public void AddToList(GameObject obj)
+    /// <summary>
+    /// Adding letters to the word
+    /// </summary>
+    /// <param name="name"></param>
+    public void AddToList(string name)
     {
-        word.Add(obj);
-        wordToCheck += obj.name;
+        wordToCheck += name;
+        amountOfLetterInWord++;
     }
 
-    public int GetAmount()
+    /// <summary>
+    /// Get the amount of letters int the word, that player is collecting
+    /// </summary>
+    /// <returns> int </returns>
+    public int GetAmountOfLettersInWord()
     {
-        return amount;
+        return amountOfLetterInWord;
     }
 
-    public void SetAmount()
-    {
-        amount++;
-    }
-
+    /// <summary>
+    /// Reload the level, reset the amount of letters in word and clear the word to check
+    /// </summary>
     public void LevelReload()
     {
         levelData.SetLevelReload(true);
-        amount = 0;
+        amountOfLetterInWord = 0;
         wordToCheck = "";
     }
 
+    /// <summary>
+    /// Get the number of an answer used in the house animation
+    /// </summary>
+    /// <returns></returns>
     public int GetAnswerNumber()
     {
         return answerNumber;
     }
 
+    /// <summary>
+    /// Checks if the level is completed, used in the house animation
+    /// </summary>
+    /// <returns></returns>
     public bool GetLevelDone()
     {
         return levelDone;
     }
 
+    /// <summary>
+    /// Sets the state of the done level, used to reset the value after the animation is done
+    /// </summary>
+    /// <param name="value"></param>
     public void SetLevelDone(bool value)
     {
         levelDone = value;
     }
 
-    public void SetAnimationPlaying(bool value)
-    {
-        animationPlaying = value;
-        Debug.Log(animationPlaying);
-    }
-
+    /// <summary>
+    /// Load the next level and reset the data
+    /// </summary>
     private void LoadNextLevel()
     {
-        Debug.Log(animationPlaying);
         wordToCheck = "";
+        amountOfLetterInWord = 0;
         levelData.SetLevelChange(true);
-        amount = 0;
-        animationPlaying = false;
     }
 }
