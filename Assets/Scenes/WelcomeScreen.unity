@@ -638,7 +638,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hallo! begin uitleg
+  m_text: Hello there!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81efed5b13475a84e8eba8314ee73f24, type: 2}
   m_sharedMaterial: {fileID: -555357240836232249, guid: 81efed5b13475a84e8eba8314ee73f24,
@@ -1690,10 +1690,11 @@ MonoBehaviour:
   dialogueBox: {fileID: 1916736671}
   dialogueButton: {fileID: 1523179336}
   dialogue:
-    name: i wanna be done for today
+    name: Fred
     sentences:
-    - 'im just trying shit out '
-    - julie or somebody can fill this shit in. i generally dont care about it to
-      be honest
-    - 'okey im just going to continue. testing more then 2 cus i dont trust myself
-      to be honest. '
+    - I am Fred and today we are building my house
+    - To build the house you have to form the correct words with the letters that
+      you will find in the world
+    - Use AWDS to move, SPACE to pick up letters, and ENTER to check if a word is
+      correct
+    - Happy hunting!
