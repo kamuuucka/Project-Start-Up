@@ -80,9 +80,12 @@ public class Letter : MonoBehaviour
 
     private void PickUp()
     {
-        if (letterManager.GetAmount() < 9)
+        if (letterManager.GetAmount() <=7)
         {
             transform.position = letterManager.letterPlacement[letterManager.GetAmount()].transform.position;
+            transform.localScale = letterManager.letterPlacement[letterManager.GetAmount()].transform.localScale;
+            transform.rotation = Quaternion.Euler(-30, 0, 0);
+            
             letterManager.SetAmount();
             letterManager.AddToList(this.gameObject);
         }
