@@ -4467,6 +4467,16 @@ PrefabInstance:
       propertyPath: Correct
       value: 
       objectReference: {fileID: 71434153}
+    - target: {fileID: 3159433783676324506, guid: f710667ec640c584ea3943f6798f36ab,
+        type: 3}
+      propertyPath: letterPlacement.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3159433783676324506, guid: f710667ec640c584ea3943f6798f36ab,
+        type: 3}
+      propertyPath: letterPlacement.Array.data[6]
+      value: 
+      objectReference: {fileID: 1677873672}
     - target: {fileID: 3159433783676324507, guid: f710667ec640c584ea3943f6798f36ab,
         type: 3}
       propertyPath: letterX
@@ -4616,6 +4626,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f710667ec640c584ea3943f6798f36ab, type: 3}
+--- !u!1 &1677873672 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 71630638763950324, guid: f710667ec640c584ea3943f6798f36ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677873671}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1682702675 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8649346699997871941, guid: b9234c34f413f9c418cea18e94dcaaea,

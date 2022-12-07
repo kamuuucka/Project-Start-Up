@@ -116,7 +116,6 @@ GameObject:
   - component: {fileID: 6445858453226289631}
   - component: {fileID: 6445858453226289630}
   - component: {fileID: 6445858453226289629}
-  - component: {fileID: 6445858453226289627}
   m_Layer: 0
   m_Name: wallLeft
   m_TagString: Untagged
@@ -209,20 +208,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6445858453226289627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6445858453226289625}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0145dd18e07841a4ca0f70962a471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: 
-  animation: {fileID: 0}
 --- !u!1 &6445858453368044839
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +220,6 @@ GameObject:
   - component: {fileID: 6445858453368044845}
   - component: {fileID: 6445858453368044844}
   - component: {fileID: 6445858453368044843}
-  - component: {fileID: 6445858453368044841}
   m_Layer: 0
   m_Name: wallRight
   m_TagString: Untagged
@@ -328,20 +312,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6445858453368044841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6445858453368044839}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0145dd18e07841a4ca0f70962a471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: 
-  animation: {fileID: 0}
 --- !u!1 &6445858453393346341
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +428,6 @@ GameObject:
   - component: {fileID: 6445858453548240083}
   - component: {fileID: 6445858453548240082}
   - component: {fileID: 6445858453548240081}
-  - component: {fileID: 6445858453548240079}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -551,20 +520,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6445858453548240079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6445858453548240077}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0145dd18e07841a4ca0f70962a471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: 
-  animation: {fileID: 0}
 --- !u!1 &6445858453711444005
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,7 +636,6 @@ GameObject:
   - component: {fileID: 6445858453788539437}
   - component: {fileID: 6445858453788539436}
   - component: {fileID: 6445858453788539435}
-  - component: {fileID: 6445858453788539433}
   m_Layer: 0
   m_Name: windowCircle
   m_TagString: Untagged
@@ -774,20 +728,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6445858453788539433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6445858453788539431}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0145dd18e07841a4ca0f70962a471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: 
-  animation: {fileID: 0}
 --- !u!1 &6445858454290964063
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +844,6 @@ GameObject:
   - component: {fileID: 6445858454528185150}
   - component: {fileID: 6445858454528185149}
   - component: {fileID: 6445858454528185148}
-  - component: {fileID: 6445858454528185146}
   m_Layer: 0
   m_Name: chimney
   m_TagString: Untagged
@@ -997,20 +936,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6445858454528185146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6445858454528185144}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd0145dd18e07841a4ca0f70962a471, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AnimationName: 
-  animation: {fileID: 0}
 --- !u!1 &6445858455055269873
 GameObject:
   m_ObjectHideFlags: 0
