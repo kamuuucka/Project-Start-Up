@@ -12,7 +12,6 @@ public class Timer : MonoBehaviour
     [SerializeField] TMP_Text timerText;
     [SerializeField] TMP_Text timerTextEnd;
 
-
     void Start()
     {
         currentTime = 0f;
@@ -32,12 +31,17 @@ public class Timer : MonoBehaviour
         {
             currentTime += Time.deltaTime;
 
+            int minutes = Mathf.FloorToInt(currentTime / 60f);
+            int seconds = Mathf.FloorToInt(currentTime - minutes * 60);
+
+            string niceTime = string.Format("{0:0}:{1:00}", minutes, seconds);
+
             if (timerText != null)
             {
-                timerText.text = currentTime.ToString("f2").Replace(",", ":");
+                timerText.text = niceTime;
             }
 
-            PlayerPrefs.SetString("timer", currentTime.ToString("f2").Replace(",", ":"));
+            PlayerPrefs.SetString("timer", niceTime);
         }
     }
 
