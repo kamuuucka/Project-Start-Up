@@ -3897,6 +3897,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8649346699997871941, guid: b9234c34f413f9c418cea18e94dcaaea,
+        type: 3}
+      propertyPath: currentTime
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8649346699997871942, guid: b9234c34f413f9c418cea18e94dcaaea,
         type: 3}
       propertyPath: m_Sprite
