@@ -6,6 +6,12 @@ public class AnimationMasterController : MonoBehaviour
     public Animator[] anims;
     string[] boolNames = { "RightWall", "BackWall", "LeftWall", "FrontWall", "Roof", "Door", "WindowCircle", "WindowSquare", "Chimney" };
     public LetterManager manager;
+    public ParticleSystem particleSystem;
+
+    private void Start()
+    {
+        particleSystem.Stop();
+    }
     void Update()
     {// test code / demo:
         for (int i = 0; i < 4; i++)
@@ -84,7 +90,7 @@ public class AnimationMasterController : MonoBehaviour
                     anims[8].SetBool(boolNames[8], true);
                     break;      //chimney
                 case 4:
-                    Debug.Log("SMOK");
+                    particleSystem.Play();
                     break;      //smoke
                 default:
                     break;
