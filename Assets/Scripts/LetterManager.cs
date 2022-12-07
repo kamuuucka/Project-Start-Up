@@ -35,7 +35,7 @@ public class LetterManager : MonoBehaviour
         {
             timer.SetBool(true);
             //Debug.Log(timer.GetTime());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Invoke(nameof(GoToLastScene), 2f);
         }
         else if (levelData.CorrectWord(wordToCheck))
         {
@@ -63,6 +63,11 @@ public class LetterManager : MonoBehaviour
             }
         }
 
+    }
+
+    private void GoToLastScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void AddToList(GameObject obj)
