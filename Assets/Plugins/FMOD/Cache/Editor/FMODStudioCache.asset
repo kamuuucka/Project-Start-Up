@@ -20,7 +20,7 @@ MonoBehaviour:
     Data4: -751541850
   Banks:
   - {fileID: 6650002919730058322}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
@@ -43,7 +43,7 @@ MonoBehaviour:
   Name: Playback
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 4
   Default: 0
   ID:
     data1: 3804603718
@@ -54,6 +54,8 @@ MonoBehaviour:
   - Correct
   - Wrong
   - Pickup
+  - ButtonHover
+  - ButtonClick
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -79,6 +81,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 4030742903569147141}
 <<<<<<< HEAD
+<<<<<<< HEAD
   cacheTime: 638060261792468973
 =======
 <<<<<<< HEAD
@@ -87,6 +90,9 @@ MonoBehaviour:
   cacheTime: 638060274048554082
 >>>>>>> buttonFix
 >>>>>>> develop
+=======
+  cacheTime: 638059964271674953
+>>>>>>> Button&PickupAudio
   cacheVersion: 131591
 --- !u!114 &1797691719833482828
 MonoBehaviour:
@@ -131,6 +137,7 @@ MonoBehaviour:
   Name: Master.strings
   StudioPath: bank:/Master.strings
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 638059228833206063
 =======
 <<<<<<< HEAD
@@ -139,6 +146,9 @@ MonoBehaviour:
   lastModified: 638059350210603757
 >>>>>>> buttonFix
 >>>>>>> develop
+=======
+  lastModified: 638059964271674953
+>>>>>>> Button&PickupAudio
   FileSizes:
   - Name: Desktop
     Value: 862
@@ -159,6 +169,7 @@ MonoBehaviour:
   Name: Master
   StudioPath: bank:/Master
 <<<<<<< HEAD
+<<<<<<< HEAD
   lastModified: 638060261792468973
 =======
 <<<<<<< HEAD
@@ -167,7 +178,10 @@ MonoBehaviour:
   lastModified: 638060274048554082
 >>>>>>> buttonFix
 >>>>>>> develop
+=======
+  lastModified: 638059964271654738
+>>>>>>> Button&PickupAudio
   FileSizes:
   - Name: Desktop
-    Value: 136384
+    Value: 149440
   Exists: 1
