@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/OutdoorsScene.unity
-    guid: 8124e5870f4fd4c779e7a5f994e84ad1
+    path: Assets/Scenes/StartScreen 1.unity
+    guid: 5238efbe74d4d0848b02b474930497c7
+  - enabled: 1
+    path: Assets/Scenes/SelectLevelScreen.unity
+    guid: a3dd1df710302204689533938eb85a73
+  - enabled: 1
+    path: Assets/Scenes/WelcomeScreen.unity
+    guid: 034910b5b128e2446a1646889252b158
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: ae743a415789e0944bd81a6a9423c9cd
+  - enabled: 1
+    path: Assets/Scenes/End_Screen_Room.unity
+    guid: 1da6077323734bf4a957b5e5f36a3320
   m_configObjects: {}

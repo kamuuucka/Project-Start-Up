@@ -2,7 +2,6 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Uu]serSettings/
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
@@ -47,7 +46,7 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-*.json
+
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -61,13 +60,13 @@ sysinfo.txt
 *.apk
 *.aab
 *.unitypackage
-*.app
+.app
 
 # Crashlytics generated file
 crashlytics-build.properties
 
 # Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata//.bin
 
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta

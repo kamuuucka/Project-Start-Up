@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13783461578e1244b8b9c8486f1c62d, type: 3}
+  m_Name: level2
+  m_EditorClassIdentifier: 
+  letters:
+    gridSize: {x: 7, y: 7}
+    cellSize: {x: 64, y: 16}
+    cells:
+    - row:
+      - O
+      - 
+      - 
+      - T
+      - T
+      - 
+      - 
+    - row:
+      - O
+      - 
+      - 
+      - 
+      - H
+      - 
+      - 
+    - row:
+      - 
+      - 
+      - 
+      - 
+      - E
+      - A
+      - 
+    - row:
+      - T
+      - 
+      - C
+      - A
+      - N
+      - 
+      - T
+    - row:
+      - 
+      - H
+      - 
+      - M
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - 
+      - A
+      - E
+      - 
+      - 
+      - 
+    - row:
+      - 
+      - 
+      - 
+      - N
+      - 
+      - 
+      - 
+  correctAnswer: THAN
+  letterPrefab: {fileID: 2469746552464189548, guid: e7b07c77d63747345a4da332d8e1eecf,
+    type: 3}
